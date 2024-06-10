@@ -10,10 +10,10 @@ using warehouse_management_core.Entities;
 
 namespace warehouse_management_application.Storages
 {
-    public class StorageService(IRepository<Storage> repository) : IServise
+    public class StorageService(IRepository<Storage> repository, IMapProvider mapProvider) : IServise
     {
         private IRepository<Storage> Repository { get; init; } = repository;
-        private IMapProvider MapProvider { get; init; }
+        private IMapProvider MapProvider { get; init; } = mapProvider;
 
         public async Task<IEnumerable<StorageDTO>> GetStoragesAsync(CancellationToken cancellationToken = default) =>
             (await Repository.Get(cancellationToken)).Select(x => (StorageDTO)x);
