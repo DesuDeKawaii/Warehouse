@@ -1,0 +1,179 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0": {
+      "NUnit/4.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/nunit.framework.dll": {
+            "related": ".legacy.xml;.xml"
+          },
+          "lib/net6.0/nunit.framework.legacy.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/nunit.framework.dll": {
+            "related": ".legacy.xml;.xml"
+          },
+          "lib/net6.0/nunit.framework.legacy.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "build/NUnit.props": {}
+        }
+      },
+      "warehouse-management-application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "warehouse-management-core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/warehouse-management-application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/warehouse-management-application.dll": {}
+        }
+      },
+      "warehouse-management-core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/warehouse-management-core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/warehouse-management-core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "NUnit/4.1.0": {
+      "sha512": "MT/DpAhjtiytzhTgTqIhBuWx4y26PKfDepYUHUM+5uv4TsryHC2jwFo5e6NhWkApCm/G6kZ80dRjdJFuAxq3rg==",
+      "type": "package",
+      "path": "nunit/4.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "CHANGES.md",
+        "LICENSE.txt",
+        "NOTICES.md",
+        "README.md",
+        "THIRD_PARTY_NOTICES.md",
+        "build/NUnit.props",
+        "icon.png",
+        "lib/net462/nunit.framework.dll",
+        "lib/net462/nunit.framework.legacy.dll",
+        "lib/net462/nunit.framework.legacy.xml",
+        "lib/net462/nunit.framework.xml",
+        "lib/net6.0/nunit.framework.dll",
+        "lib/net6.0/nunit.framework.legacy.dll",
+        "lib/net6.0/nunit.framework.legacy.xml",
+        "lib/net6.0/nunit.framework.xml",
+        "nunit.4.1.0.nupkg.sha512",
+        "nunit.nuspec"
+      ]
+    },
+    "warehouse-management-application/1.0.0": {
+      "type": "project",
+      "path": "../warehouse-management-application/warehouse-management-application.csproj",
+      "msbuildProject": "../warehouse-management-application/warehouse-management-application.csproj"
+    },
+    "warehouse-management-core/1.0.0": {
+      "type": "project",
+      "path": "../warehouse-management-core/warehouse-management-core.csproj",
+      "msbuildProject": "../warehouse-management-core/warehouse-management-core.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0": [
+      "NUnit >= 4.1.0",
+      "warehouse-management-application >= 1.0.0",
+      "warehouse-management-core >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Дмитрий\\.nuget\\packages\\": {},
+    "D:\\vs other\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\Дмитрий\\Desktop\\ебал в рот эту хуйню\\Warehouse-management\\warehouse-management-applicationtests\\warehouse-management-applicationtests.csproj",
+      "projectName": "warehouse-management-applicationtests",
+      "projectPath": "C:\\Users\\Дмитрий\\Desktop\\ебал в рот эту хуйню\\Warehouse-management\\warehouse-management-applicationtests\\warehouse-management-applicationtests.csproj",
+      "packagesPath": "C:\\Users\\Дмитрий\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Дмитрий\\Desktop\\ебал в рот эту хуйню\\Warehouse-management\\warehouse-management-applicationtests\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "D:\\vs other\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\Дмитрий\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "projectReferences": {
+            "C:\\Users\\Дмитрий\\Desktop\\ебал в рот эту хуйню\\Warehouse-management\\warehouse-management-application\\warehouse-management-application.csproj": {
+              "projectPath": "C:\\Users\\Дмитрий\\Desktop\\ебал в рот эту хуйню\\Warehouse-management\\warehouse-management-application\\warehouse-management-application.csproj"
+            },
+            "C:\\Users\\Дмитрий\\Desktop\\ебал в рот эту хуйню\\Warehouse-management\\warehouse-management-core\\warehouse-management-core.csproj": {
+              "projectPath": "C:\\Users\\Дмитрий\\Desktop\\ебал в рот эту хуйню\\Warehouse-management\\warehouse-management-core\\warehouse-management-core.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      }
+    },
+    "frameworks": {
+      "net8.0": {
+        "targetAlias": "net8.0",
+        "dependencies": {
+          "NUnit": {
+            "target": "Package",
+            "version": "[4.1.0, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
