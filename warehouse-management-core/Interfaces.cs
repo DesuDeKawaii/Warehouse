@@ -26,3 +26,8 @@ public interface IRepository<TEntity> where TEntity : class, IEntity
     Task<IEnumerable<TEntity>> GetWithoutTracking(CancellationToken cancellationToken);
     Task<IEnumerable<TEntity>> GetWithoutTracking(Func<TEntity, bool> predicate, CancellationToken cancellationToken);
 }
+public interface IMapProvider
+{
+    Task<(double Latitude, double Longitude)> GetCoordinatesAsync(string address, CancellationToken cancellationToken = default);
+    double CalculateDistance(double latitude1, double longitude1, double latitude2, double longitude2);
+}

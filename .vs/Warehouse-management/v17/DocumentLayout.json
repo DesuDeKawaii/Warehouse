@@ -1,38 +1,42 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\\u0435\u0431\u0430\u043B \u0432 \u0440\u043E\u0442 \u044D\u0442\u0443 \u0445\u0443\u0439\u043D\u044E\\Warehouse-management\\",
+  "WorkspaceRootPath": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{40F3CC7D-4F25-445C-9569-F4C69A6B1789}|warehouse-management-core\\warehouse-management-core.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\\u0435\u0431\u0430\u043B \u0432 \u0440\u043E\u0442 \u044D\u0442\u0443 \u0445\u0443\u0439\u043D\u044E\\warehouse-management\\warehouse-management-core\\interfaces.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{40F3CC7D-4F25-445C-9569-F4C69A6B1789}|warehouse-management-core\\warehouse-management-core.csproj|solutionrelative:warehouse-management-core\\interfaces.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E7D18216-2383-4AED-A3F9-62590EF695EA}|warehouse-management-api\\warehouse-management-api.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\\u0435\u0431\u0430\u043B \u0432 \u0440\u043E\u0442 \u044D\u0442\u0443 \u0445\u0443\u0439\u043D\u044E\\warehouse-management\\warehouse-management-api\\endpoints\\itemendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7D18216-2383-4AED-A3F9-62590EF695EA}|warehouse-management-api\\warehouse-management-api.csproj|solutionrelative:warehouse-management-api\\endpoints\\itemendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE9F4AA6-19F3-4513-886D-8049C1CCDA3D}|warehouse-management-application\\warehouse-management-application.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\\u0435\u0431\u0430\u043B \u0432 \u0440\u043E\u0442 \u044D\u0442\u0443 \u0445\u0443\u0439\u043D\u044E\\warehouse-management\\warehouse-management-application\\items\\itemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FE9F4AA6-19F3-4513-886D-8049C1CCDA3D}|warehouse-management-application\\warehouse-management-application.csproj|solutionrelative:warehouse-management-application\\items\\itemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE9F4AA6-19F3-4513-886D-8049C1CCDA3D}|warehouse-management-application\\warehouse-management-application.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\\u0435\u0431\u0430\u043B \u0432 \u0440\u043E\u0442 \u044D\u0442\u0443 \u0445\u0443\u0439\u043D\u044E\\warehouse-management\\warehouse-management-application\\shops\\shopservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FE9F4AA6-19F3-4513-886D-8049C1CCDA3D}|warehouse-management-application\\warehouse-management-application.csproj|solutionrelative:warehouse-management-application\\shops\\shopservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE9F4AA6-19F3-4513-886D-8049C1CCDA3D}|warehouse-management-application\\warehouse-management-application.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\\u0435\u0431\u0430\u043B \u0432 \u0440\u043E\u0442 \u044D\u0442\u0443 \u0445\u0443\u0439\u043D\u044E\\warehouse-management\\warehouse-management-application\\storages\\storageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FE9F4AA6-19F3-4513-886D-8049C1CCDA3D}|warehouse-management-application\\warehouse-management-application.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\warehouse\\warehouse-management\\warehouse-management-application\\storages\\storageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FE9F4AA6-19F3-4513-886D-8049C1CCDA3D}|warehouse-management-application\\warehouse-management-application.csproj|solutionrelative:warehouse-management-application\\storages\\storageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CF399B3F-6A2C-4A77-AB5B-13D85975B8AE}|warehouse-management-infrastructure\\warehouse-management-infrastructure.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\\u0435\u0431\u0430\u043B \u0432 \u0440\u043E\u0442 \u044D\u0442\u0443 \u0445\u0443\u0439\u043D\u044E\\warehouse-management\\warehouse-management-infrastructure\\db\\basicrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{40F3CC7D-4F25-445C-9569-F4C69A6B1789}|warehouse-management-core\\warehouse-management-core.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\warehouse\\warehouse-management\\warehouse-management-core\\entities\\storage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40F3CC7D-4F25-445C-9569-F4C69A6B1789}|warehouse-management-core\\warehouse-management-core.csproj|solutionrelative:warehouse-management-core\\entities\\storage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40F3CC7D-4F25-445C-9569-F4C69A6B1789}|warehouse-management-core\\warehouse-management-core.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\warehouse\\warehouse-management\\warehouse-management-core\\interfaces.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40F3CC7D-4F25-445C-9569-F4C69A6B1789}|warehouse-management-core\\warehouse-management-core.csproj|solutionrelative:warehouse-management-core\\interfaces.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40F3CC7D-4F25-445C-9569-F4C69A6B1789}|warehouse-management-core\\warehouse-management-core.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\warehouse\\warehouse-management\\warehouse-management-core\\entities\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40F3CC7D-4F25-445C-9569-F4C69A6B1789}|warehouse-management-core\\warehouse-management-core.csproj|solutionrelative:warehouse-management-core\\entities\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7D18216-2383-4AED-A3F9-62590EF695EA}|warehouse-management-api\\warehouse-management-api.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\warehouse\\warehouse-management\\warehouse-management-api\\endpoints\\itemendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7D18216-2383-4AED-A3F9-62590EF695EA}|warehouse-management-api\\warehouse-management-api.csproj|solutionrelative:warehouse-management-api\\endpoints\\itemendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE9F4AA6-19F3-4513-886D-8049C1CCDA3D}|warehouse-management-application\\warehouse-management-application.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\warehouse\\warehouse-management\\warehouse-management-application\\items\\itemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE9F4AA6-19F3-4513-886D-8049C1CCDA3D}|warehouse-management-application\\warehouse-management-application.csproj|solutionrelative:warehouse-management-application\\items\\itemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE9F4AA6-19F3-4513-886D-8049C1CCDA3D}|warehouse-management-application\\warehouse-management-application.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\warehouse\\warehouse-management\\warehouse-management-application\\shops\\shopservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE9F4AA6-19F3-4513-886D-8049C1CCDA3D}|warehouse-management-application\\warehouse-management-application.csproj|solutionrelative:warehouse-management-application\\shops\\shopservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF399B3F-6A2C-4A77-AB5B-13D85975B8AE}|warehouse-management-infrastructure\\warehouse-management-infrastructure.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\warehouse\\warehouse-management\\warehouse-management-infrastructure\\db\\basicrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CF399B3F-6A2C-4A77-AB5B-13D85975B8AE}|warehouse-management-infrastructure\\warehouse-management-infrastructure.csproj|solutionrelative:warehouse-management-infrastructure\\db\\basicrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{40F3CC7D-4F25-445C-9569-F4C69A6B1789}|warehouse-management-core\\warehouse-management-core.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\\u0435\u0431\u0430\u043B \u0432 \u0440\u043E\u0442 \u044D\u0442\u0443 \u0445\u0443\u0439\u043D\u044E\\warehouse-management\\warehouse-management-core\\exceptions\\itemoutofstockexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{40F3CC7D-4F25-445C-9569-F4C69A6B1789}|warehouse-management-core\\warehouse-management-core.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\warehouse\\warehouse-management\\warehouse-management-core\\exceptions\\itemoutofstockexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{40F3CC7D-4F25-445C-9569-F4C69A6B1789}|warehouse-management-core\\warehouse-management-core.csproj|solutionrelative:warehouse-management-core\\exceptions\\itemoutofstockexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{40F3CC7D-4F25-445C-9569-F4C69A6B1789}|warehouse-management-core\\warehouse-management-core.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\\u0435\u0431\u0430\u043B \u0432 \u0440\u043E\u0442 \u044D\u0442\u0443 \u0445\u0443\u0439\u043D\u044E\\warehouse-management\\warehouse-management-core\\entities\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{40F3CC7D-4F25-445C-9569-F4C69A6B1789}|warehouse-management-core\\warehouse-management-core.csproj|solutionrelative:warehouse-management-core\\entities\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,108 +46,116 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ItemEndPoint.cs",
-              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\\u0435\u0431\u0430\u043B \u0432 \u0440\u043E\u0442 \u044D\u0442\u0443 \u0445\u0443\u0439\u043D\u044E\\Warehouse-management\\warehouse-management-api\\Endpoints\\ItemEndPoint.cs",
-              "RelativeDocumentMoniker": "warehouse-management-api\\Endpoints\\ItemEndPoint.cs",
-              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\\u0435\u0431\u0430\u043B \u0432 \u0440\u043E\u0442 \u044D\u0442\u0443 \u0445\u0443\u0439\u043D\u044E\\Warehouse-management\\warehouse-management-api\\Endpoints\\ItemEndPoint.cs",
-              "RelativeToolTip": "warehouse-management-api\\Endpoints\\ItemEndPoint.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAABJAAAA",
+              "Title": "Storage.cs",
+              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-core\\Entities\\Storage.cs",
+              "RelativeDocumentMoniker": "warehouse-management-core\\Entities\\Storage.cs",
+              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-core\\Entities\\Storage.cs",
+              "RelativeToolTip": "warehouse-management-core\\Entities\\Storage.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T01:14:57.153Z",
+              "WhenOpened": "2024-06-10T07:23:03.687Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
+              "Title": "ItemEndPoint.cs",
+              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-api\\Endpoints\\ItemEndPoint.cs",
+              "RelativeDocumentMoniker": "warehouse-management-api\\Endpoints\\ItemEndPoint.cs",
+              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-api\\Endpoints\\ItemEndPoint.cs",
+              "RelativeToolTip": "warehouse-management-api\\Endpoints\\ItemEndPoint.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAABJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-10T01:14:57.153Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Interfaces.cs",
-              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\\u0435\u0431\u0430\u043B \u0432 \u0440\u043E\u0442 \u044D\u0442\u0443 \u0445\u0443\u0439\u043D\u044E\\Warehouse-management\\warehouse-management-core\\Interfaces.cs",
+              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-core\\Interfaces.cs",
               "RelativeDocumentMoniker": "warehouse-management-core\\Interfaces.cs",
-              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\\u0435\u0431\u0430\u043B \u0432 \u0440\u043E\u0442 \u044D\u0442\u0443 \u0445\u0443\u0439\u043D\u044E\\Warehouse-management\\warehouse-management-core\\Interfaces.cs",
+              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-core\\Interfaces.cs",
               "RelativeToolTip": "warehouse-management-core\\Interfaces.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAowBEAAABZAAAA",
+              "ViewState": "AQIAABMAAAAAAAAAAAAYwCAAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-09T23:55:37.933Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "BasicRepository.cs",
-              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\\u0435\u0431\u0430\u043B \u0432 \u0440\u043E\u0442 \u044D\u0442\u0443 \u0445\u0443\u0439\u043D\u044E\\Warehouse-management\\warehouse-management-infrastructure\\Db\\BasicRepository.cs",
+              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-infrastructure\\Db\\BasicRepository.cs",
               "RelativeDocumentMoniker": "warehouse-management-infrastructure\\Db\\BasicRepository.cs",
-              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\\u0435\u0431\u0430\u043B \u0432 \u0440\u043E\u0442 \u044D\u0442\u0443 \u0445\u0443\u0439\u043D\u044E\\Warehouse-management\\warehouse-management-infrastructure\\Db\\BasicRepository.cs",
+              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-infrastructure\\Db\\BasicRepository.cs",
               "RelativeToolTip": "warehouse-management-infrastructure\\Db\\BasicRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-09T23:52:43.386Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-09T23:52:43.386Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "ItemOutOfStockException.cs",
-              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\\u0435\u0431\u0430\u043B \u0432 \u0440\u043E\u0442 \u044D\u0442\u0443 \u0445\u0443\u0439\u043D\u044E\\Warehouse-management\\warehouse-management-core\\Exceptions\\ItemOutOfStockException.cs",
+              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-core\\Exceptions\\ItemOutOfStockException.cs",
               "RelativeDocumentMoniker": "warehouse-management-core\\Exceptions\\ItemOutOfStockException.cs",
-              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\\u0435\u0431\u0430\u043B \u0432 \u0440\u043E\u0442 \u044D\u0442\u0443 \u0445\u0443\u0439\u043D\u044E\\Warehouse-management\\warehouse-management-core\\Exceptions\\ItemOutOfStockException.cs",
+              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-core\\Exceptions\\ItemOutOfStockException.cs",
               "RelativeToolTip": "warehouse-management-core\\Exceptions\\ItemOutOfStockException.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-09T23:32:45.473Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-09T23:32:45.473Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "StorageService.cs",
-              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\\u0435\u0431\u0430\u043B \u0432 \u0440\u043E\u0442 \u044D\u0442\u0443 \u0445\u0443\u0439\u043D\u044E\\Warehouse-management\\warehouse-management-application\\Storages\\StorageService.cs",
+              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-application\\Storages\\StorageService.cs",
               "RelativeDocumentMoniker": "warehouse-management-application\\Storages\\StorageService.cs",
-              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\\u0435\u0431\u0430\u043B \u0432 \u0440\u043E\u0442 \u044D\u0442\u0443 \u0445\u0443\u0439\u043D\u044E\\Warehouse-management\\warehouse-management-application\\Storages\\StorageService.cs",
+              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-application\\Storages\\StorageService.cs",
               "RelativeToolTip": "warehouse-management-application\\Storages\\StorageService.cs",
-              "ViewState": "AQIAADQAAAAAAAAAAAAcwDwAAAApAAAA",
+              "ViewState": "AQIAAE0AAAAAAAAAAAAuwA4AAABMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-09T22:53:42.901Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "ItemService.cs",
-              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\\u0435\u0431\u0430\u043B \u0432 \u0440\u043E\u0442 \u044D\u0442\u0443 \u0445\u0443\u0439\u043D\u044E\\Warehouse-management\\warehouse-management-application\\Items\\ItemService.cs",
+              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-application\\Items\\ItemService.cs",
               "RelativeDocumentMoniker": "warehouse-management-application\\Items\\ItemService.cs",
-              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\\u0435\u0431\u0430\u043B \u0432 \u0440\u043E\u0442 \u044D\u0442\u0443 \u0445\u0443\u0439\u043D\u044E\\Warehouse-management\\warehouse-management-application\\Items\\ItemService.cs",
+              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-application\\Items\\ItemService.cs",
               "RelativeToolTip": "warehouse-management-application\\Items\\ItemService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T16:24:03.105Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-04T16:24:03.105Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ShopService.cs",
+              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-application\\Shops\\ShopService.cs",
+              "RelativeDocumentMoniker": "warehouse-management-application\\Shops\\ShopService.cs",
+              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-application\\Shops\\ShopService.cs",
+              "RelativeToolTip": "warehouse-management-application\\Shops\\ShopService.cs",
+              "ViewState": "AQIAADQAAAAAAAAAAAAcwBgAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-09T22:38:52.29Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ShopService.cs",
-              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\\u0435\u0431\u0430\u043B \u0432 \u0440\u043E\u0442 \u044D\u0442\u0443 \u0445\u0443\u0439\u043D\u044E\\Warehouse-management\\warehouse-management-application\\Shops\\ShopService.cs",
-              "RelativeDocumentMoniker": "warehouse-management-application\\Shops\\ShopService.cs",
-              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\\u0435\u0431\u0430\u043B \u0432 \u0440\u043E\u0442 \u044D\u0442\u0443 \u0445\u0443\u0439\u043D\u044E\\Warehouse-management\\warehouse-management-application\\Shops\\ShopService.cs",
-              "RelativeToolTip": "warehouse-management-application\\Shops\\ShopService.cs",
-              "ViewState": "AQIAADQAAAAAAAAAAAAcwBgAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-09T22:38:52.29Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
               "Title": "Item.cs",
-              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\\u0435\u0431\u0430\u043B \u0432 \u0440\u043E\u0442 \u044D\u0442\u0443 \u0445\u0443\u0439\u043D\u044E\\Warehouse-management\\warehouse-management-core\\Entities\\Item.cs",
+              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-core\\Entities\\Item.cs",
               "RelativeDocumentMoniker": "warehouse-management-core\\Entities\\Item.cs",
-              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\\u0435\u0431\u0430\u043B \u0432 \u0440\u043E\u0442 \u044D\u0442\u0443 \u0445\u0443\u0439\u043D\u044E\\Warehouse-management\\warehouse-management-core\\Entities\\Item.cs",
+              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-core\\Entities\\Item.cs",
               "RelativeToolTip": "warehouse-management-core\\Entities\\Item.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-04T16:24:03.197Z",
               "EditorCaption": ""

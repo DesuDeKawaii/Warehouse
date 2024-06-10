@@ -6,6 +6,8 @@ public class Storage : IEntity
     public string Name { get; set; }
     public string Description { get; set; }
     public int Capacity { get; set; }
+    public double Longitude { get; set; }
+    public double Latitude { get; set; }
 
     public int Temperature { get; set; }
 

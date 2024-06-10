@@ -1,5 +1,5 @@
 is_global = true
-build_property.TargetFramework = net7.0
+build_property.TargetFramework = net8.0
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = 
 build_property.ProjectTypeGuids = 
@@ -7,7 +7,7 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
-build_property.RootNamespace = warehouse_management_core
-build_property.ProjectDir = C:\Users\Дмитрий\Desktop\Warehouse\Warehouse-management\warehouse-management-core\
+build_property.RootNamespace = warehouse_management_infrastructure
+build_property.ProjectDir = C:\Users\Дмитрий\Desktop\Warehouse\Warehouse-management\warehouse-management-infrastructure\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

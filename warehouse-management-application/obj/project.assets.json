@@ -33,11 +33,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Дмитрий\\Desktop\\ебал в рот эту хуйню\\Warehouse-management\\warehouse-management-application\\warehouse-management-application.csproj",
+      "projectUniqueName": "C:\\Users\\Дмитрий\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-application\\warehouse-management-application.csproj",
       "projectName": "warehouse-management-application",
-      "projectPath": "C:\\Users\\Дмитрий\\Desktop\\ебал в рот эту хуйню\\Warehouse-management\\warehouse-management-application\\warehouse-management-application.csproj",
+      "projectPath": "C:\\Users\\Дмитрий\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-application\\warehouse-management-application.csproj",
       "packagesPath": "C:\\Users\\Дмитрий\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Дмитрий\\Desktop\\ебал в рот эту хуйню\\Warehouse-management\\warehouse-management-application\\obj\\",
+      "outputPath": "C:\\Users\\Дмитрий\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-application\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\vs other\\NuGetPackages"
@@ -59,8 +59,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Дмитрий\\Desktop\\ебал в рот эту хуйню\\Warehouse-management\\warehouse-management-core\\warehouse-management-core.csproj": {
-              "projectPath": "C:\\Users\\Дмитрий\\Desktop\\ебал в рот эту хуйню\\Warehouse-management\\warehouse-management-core\\warehouse-management-core.csproj"
+            "C:\\Users\\Дмитрий\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-core\\warehouse-management-core.csproj": {
+              "projectPath": "C:\\Users\\Дмитрий\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-core\\warehouse-management-core.csproj"
             }
           }
         }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using warehouse_management_core;
 using warehouse_management_core.DTO_s;
 using warehouse_management_core.Entities;
 
@@ -12,6 +13,7 @@ namespace warehouse_management_application.Storages
     public class StorageService(IRepository<Storage> repository) : IServise
     {
         private IRepository<Storage> Repository { get; init; } = repository;
+        private IMapProvider MapProvider { get; init; }
 
         public async Task<IEnumerable<StorageDTO>> GetStoragesAsync(CancellationToken cancellationToken = default) =>
             (await Repository.Get(cancellationToken)).Select(x => (StorageDTO)x);
@@ -95,5 +97,72 @@ namespace warehouse_management_application.Storages
         }
 
 
+        private async Task<Storage> FindSuitableStorageAsync(Item item, Storage currentStorage, CancellationToken cancellationToken)
+        {
+            var suitableStorages = await Repository.GetWithoutTracking(x =>
+                x.Id != currentStorage.Id &&
+                x.Capacity > x.ItemsStorage.Sum(x => x.Amount) &&
+                x.Temperature <= item.Temperature, cancellationToken);
+
+            var currentStorageCoordinates = await MapProvider.GetCoordinatesAsync(currentStorage.Name, cancellationToken);
+
+            var sortedStorages = suitableStorages
+                .Select(async x =>
+                {
+                    var coordinates = await MapProvider.GetCoordinatesAsync(x.Name, cancellationToken);
+                    var distance = MapProvider.CalculateDistance(currentStorageCoordinates.Latitude, currentStorageCoordinates.Longitude, coordinates.Latitude, coordinates.Longitude);
+                    return new { Storage = x, Distance = distance };
+                }).Select(x => x.Result)
+                .OrderBy(x => x.Distance)
+                .Select(x => x.Storage)
+                .ToList();
+
+            return sortedStorages.FirstOrDefault();
+        }
+
+
+        public async Task MoveItemsIfOverflowAsync(Guid storageId, CancellationToken cancellationToken = default)
+        {
+            var storage = (await Repository.GetWithoutTracking(x => x.Id.Value == storageId, cancellationToken)).FirstOrDefault() ??
+                          throw new StorageNotFoundException(storageId);
+
+            if (storage.ItemsStorage.Sum(x => x.Amount) > storage.Capacity)
+            {
+                var itemsToMove = storage.ItemsStorage.ToList();
+
+                foreach (var itemStorage in itemsToMove)
+                {
+                    var suitableStorage = await FindSuitableStorageAsync(itemStorage.Item, storage, cancellationToken);
+
+                    if (suitableStorage != null)
+                    {
+                        await TransferItemAsync(itemStorage, suitableStorage, cancellationToken);
+                    }
+                }
+            }
+        }
+        private async Task TransferItemAsync(ItemStorage itemStorage, Storage targetStorage, CancellationToken cancellationToken)
+        {
+            var itemInTargetStorage = targetStorage.ItemsStorage.FirstOrDefault(x => x.Item.Id == itemStorage.Item.Id);
+            if (itemInTargetStorage != null)
+            {
+                itemInTargetStorage.Amount += itemStorage.Amount;
+            }
+            else
+            {
+                targetStorage.ItemsStorage.Add(new ItemStorage
+                {
+                    Item = itemStorage.Item,
+                    Amount = itemStorage.Amount,
+                    Storage = targetStorage
+                });
+            }
+
+            var currentStorage = itemStorage.Storage;
+            currentStorage.ItemsStorage.Remove(itemStorage);
+
+            await Repository.Update(currentStorage, cancellationToken);
+            await Repository.Update(targetStorage, cancellationToken);
+        }
     }
 }

@@ -4307,11 +4307,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Дмитрий\\Desktop\\ебал в рот эту хуйню\\Warehouse-management\\warehouse-management-infrastructure\\warehouse-management-infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\Дмитрий\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-infrastructure\\warehouse-management-infrastructure.csproj",
       "projectName": "warehouse-management-infrastructure",
-      "projectPath": "C:\\Users\\Дмитрий\\Desktop\\ебал в рот эту хуйню\\Warehouse-management\\warehouse-management-infrastructure\\warehouse-management-infrastructure.csproj",
+      "projectPath": "C:\\Users\\Дмитрий\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-infrastructure\\warehouse-management-infrastructure.csproj",
       "packagesPath": "C:\\Users\\Дмитрий\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Дмитрий\\Desktop\\ебал в рот эту хуйню\\Warehouse-management\\warehouse-management-infrastructure\\obj\\",
+      "outputPath": "C:\\Users\\Дмитрий\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\vs other\\NuGetPackages"
@@ -4333,11 +4333,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Дмитрий\\Desktop\\ебал в рот эту хуйню\\Warehouse-management\\warehouse-management-applicationtests\\warehouse-management-applicationtests.csproj": {
-              "projectPath": "C:\\Users\\Дмитрий\\Desktop\\ебал в рот эту хуйню\\Warehouse-management\\warehouse-management-applicationtests\\warehouse-management-applicationtests.csproj"
+            "C:\\Users\\Дмитрий\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-applicationtests\\warehouse-management-applicationtests.csproj": {
+              "projectPath": "C:\\Users\\Дмитрий\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-applicationtests\\warehouse-management-applicationtests.csproj"
             },
-            "C:\\Users\\Дмитрий\\Desktop\\ебал в рот эту хуйню\\Warehouse-management\\warehouse-management-application\\warehouse-management-application.csproj": {
-              "projectPath": "C:\\Users\\Дмитрий\\Desktop\\ебал в рот эту хуйню\\Warehouse-management\\warehouse-management-application\\warehouse-management-application.csproj"
+            "C:\\Users\\Дмитрий\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-application\\warehouse-management-application.csproj": {
+              "projectPath": "C:\\Users\\Дмитрий\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-application\\warehouse-management-application.csproj"
             }
           }
         }
