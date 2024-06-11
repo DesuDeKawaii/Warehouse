@@ -134,4 +134,178 @@ public class ShopService(IRepository<Shop> repository) : IServise
         await StorageRepository.Update(sourceStorage, cancellationToken);
         await Repository.Update(targetShop, cancellationToken);
     }
+
+
+
+
+
+
+
+    public List<Tuple<int, int>> ExecuteTransportTask(List<Storage> storages, Shop shop)
+    {
+        var table = PrepareTable(storages, shop);
+        table = NormalizeTable(table);
+        SolveTransportTask(table);
+        return GetOptimalDistribution(table, storages);
+    }
+
+    private List<List<Tuple<int, int>>> PrepareTable(List<Storage> storages, Shop shop)
+    {
+        var table = new List<List<Tuple<int, int>>>();
+
+        foreach (var storage in storages)
+        {
+            var row = new List<Tuple<int, int>>
+            {
+                new Tuple<int, int>(CalculateCost(storage, shop), -1),
+                new Tuple<int, int>(storage.ItemsStorage.Sum(x => x.Amount), -1)
+            };
+            table.Add(row);
+        }
+
+        var lastRow = new List<Tuple<int, int>>
+        {
+            new Tuple<int, int>(shop.ItemsShop.Sum(x => x.Amount), -1),
+            new Tuple<int, int>(0, -1)
+        };
+        table.Add(lastRow);
+
+        return table;
+    }
+
+    private int CalculateCost(Storage storage, Shop shop)
+    {
+        var distance = CalculateDistance(storage.Latitude, storage.Longitude, shop.Latitude, shop.Longitude);
+        return (int)Math.Round(distance);
+    }
+
+    private double CalculateDistance(double lat1, double lon1, double lat2, double lon2)
+    {
+        var R = 6371;
+        var dLat = ToRadians(lat2 - lat1);
+        var dLon = ToRadians(lon2 - lon1);
+        var a = Math.Sin(dLat / 2) * Math.Sin(dLat / 2) +
+                Math.Cos(ToRadians(lat1)) * Math.Cos(ToRadians(lat2)) *
+                Math.Sin(dLon / 2) * Math.Sin(dLon / 2);
+        var c = 2 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1 - a));
+        var distance = R * c;
+        return distance;
+    }
+
+    private double ToRadians(double angle)
+    {
+        return Math.PI * angle / 180.0;
+    }
+
+    private List<List<Tuple<int, int>>> NormalizeTable(List<List<Tuple<int, int>>> table)
+    {
+        int sumRow = table.Last().First().Item1;
+        int sumCol = table.Sum(row => row.Last().Item1);
+
+        if (sumCol < sumRow)
+        {
+            var newRow = new List<Tuple<int, int>>();
+            for (int i = 0; i < table[0].Count - 1; i++)
+            {
+                newRow.Add(new Tuple<int, int>(0, -1));
+            }
+            newRow.Add(new Tuple<int, int>(sumRow - sumCol, -1));
+            table.Insert(table.Count - 1, newRow);
+        }
+        return table;
+    }
+
+    private void SolveTransportTask(List<List<Tuple<int, int>>> table)
+    {
+        while (!IsSolved(table))
+        {
+            var minId = SearchMinCostCell(table);
+            var min = Math.Min(table[minId.Item1].Last().Item1, table.Last()[minId.Item2].Item1);
+
+            if (table[minId.Item1].Last().Item1 - min == 0) // row
+            {
+                for (int i = 0; i < table[minId.Item1].Count - 1; i++)
+                {
+                    if (minId.Item2 == i)
+                    {
+                        table[minId.Item1][i] = new Tuple<int, int>(table[minId.Item1][i].Item1, min);
+                        continue;
+                    }
+                    if (table[minId.Item1][i].Item2 != -1) continue;
+                    table[minId.Item1][i] = new Tuple<int, int>(table[minId.Item1][i].Item1, -2);
+                }
+            }
+            else // column
+            {
+                for (int i = 0; i < table.Count - 1; i++)
+                {
+                    if (minId.Item1 == i)
+                    {
+                        table[i][minId.Item2] = new Tuple<int, int>(table[i][minId.Item2].Item1, min);
+                        continue;
+                    }
+                    if (table[i][minId.Item2].Item2 != -1) continue;
+                    table[i][minId.Item2] = new Tuple<int, int>(table[i][minId.Item2].Item1, -2);
+                }
+            }
+            table[minId.Item1][table[0].Count - 1] = new Tuple<int, int>(table[minId.Item1][table[0].Count - 1].Item1 - min, -1);
+            table[table.Count - 1][minId.Item2] = new Tuple<int, int>(table[table.Count - 1][minId.Item2].Item1 - min, -1);
+        }
+    }
+
+    private Tuple<int, int> SearchMinCostCell(List<List<Tuple<int, int>>> table)
+    {
+        int min = int.MaxValue;
+        Tuple<int, int> minId = null;
+        for (int i = 0; i < table.Count - 1; i++)
+        {
+            for (int j = 0; j < table[i].Count - 1; j++)
+            {
+                if (table[i][j].Item1 < min && table[i][j].Item1 != 0 && table[i][j].Item2 == -1)
+                {
+                    minId = new Tuple<int, int>(i, j);
+                    min = table[i][j].Item1;
+                }
+            }
+        }
+        if (min == int.MaxValue)
+        {
+            for (int i = 0; i < table.Count - 1; i++)
+            {
+                for (int j = 0; j < table[i].Count - 1; j++)
+                {
+                    if (table[i][j].Item1 == 0 && table[i][j].Item2 == -1)
+                    {
+                        minId = new Tuple<int, int>(i, j);
+                        return minId;
+                    }
+                }
+            }
+        }
+        return minId;
+    }
+
+    private bool IsSolved(List<List<Tuple<int, int>>> table)
+    {
+        return table.Last().All(t => t.Item1 == 0) && table.All(row => row.Last().Item1 == 0);
+    }
+
+    private List<Tuple<int, int>> GetOptimalDistribution(List<List<Tuple<int, int>>> table, List<Storage> storages)
+    {
+        var result = new List<Tuple<int, int>>();
+
+        for (int i = 0; i < table.Count - 1; i++)
+        {
+            for (int j = 0; j < table[i].Count - 1; j++)
+            {
+                if (table[i][j].Item2 > 0)
+                {
+                    result.Add(new Tuple<int, int>(storages[i].Id, table[i][j].Item2));
+                }
+            }
+        }
+        return result;
+    }
+
+
 }

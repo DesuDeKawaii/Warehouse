@@ -8,6 +8,8 @@ public class StorageDTO
     public int Capacity { get; set; }
 
     public int Temperature { get; set; }
+    public double Longitude { get; set; }
+    public double Latitude { get; set; }
 
     public static implicit operator StorageDTO(Storage other) =>
     new()
@@ -16,6 +18,8 @@ public class StorageDTO
         Name = other.Name,
         Description = other.Description,
         Capacity = other.Capacity,
-        Temperature = other.Temperature
+        Temperature = other.Temperature,
+        Longitude = other.Longitude,
+        Latitude = other.Latitude
     };
 }
