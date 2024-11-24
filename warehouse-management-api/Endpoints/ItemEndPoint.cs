@@ -16,6 +16,7 @@ public static class ItemEndPoint
         routes.MapPost("api/item/create", CreateItem).WithTags("Item");
         routes.MapGet("api/items", GetItem).WithTags("Item");
         routes.MapGet("api/item/{itemId}", GetItemById).WithTags("Item");
+        routes.MapDelete("api/item/{itemId}", DeleteItem).WithTags("Item");
     }
 
 
@@ -61,6 +62,26 @@ public static class ItemEndPoint
             await service.GetItemById(itemId, cancellationToken);
             return Results.Ok();
 
+        }
+        catch (ItemNotFoundException ex)
+        {
+            logger.LogError(ex, "Failed to find item.");
+            return Results.BadRequest($"An item with ID '{itemId}' is not found.");
+        }
+        catch (Exception ex)
+        {
+            logger.LogError(ex, "An error occurred while creating the item.");
+            return Results.StatusCode(StatusCodes.Status500InternalServerError);
+        }
+    }
+
+    [HttpDelete]
+    public static async Task<IResult> DeleteItem(Guid itemId, ItemService service, ILogger logger, CancellationToken cancellationToken)
+    {
+        try
+        {
+            await service.DeleteItemById(itemId, cancellationToken);
+            return Results.NoContent();
         }
         catch (ItemNotFoundException ex)
         {

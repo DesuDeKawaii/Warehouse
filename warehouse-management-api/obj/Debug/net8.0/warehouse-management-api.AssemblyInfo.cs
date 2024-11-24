@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("warehouse-management-core")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("warehouse-management-api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9eac58feab75eb5ee286cd1e315e63c8fb53d9eb")]
-[assembly: System.Reflection.AssemblyProductAttribute("warehouse-management-core")]
-[assembly: System.Reflection.AssemblyTitleAttribute("warehouse-management-core")]
+[assembly: System.Reflection.AssemblyProductAttribute("warehouse-management-api")]
+[assembly: System.Reflection.AssemblyTitleAttribute("warehouse-management-api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Создано классом WriteCodeFragment MSBuild.

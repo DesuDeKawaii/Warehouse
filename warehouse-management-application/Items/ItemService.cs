@@ -10,6 +10,7 @@ public class ItemService(IRepository<Item> repository) : IServise
 
     public async Task<IEnumerable<ItemDTO>> GetItemsAsync(CancellationToken cancellationToken = default) =>
         (await Repository.Get(cancellationToken)).Select(x => (ItemDTO)x);
+     
 
     public async Task CreateOrUpdateItemAsync(ItemDTO item, CancellationToken cancellationToken = default)
     {
@@ -43,5 +44,12 @@ public class ItemService(IRepository<Item> repository) : IServise
     {
         var item = (await Repository.Get(x => x.Id.Value == itemId, cancellationToken)).FirstOrDefault() ?? 
             throw new ItemNotFoundException(itemId); 
+    }
+
+    public async Task DeleteItemById(Guid itemId, CancellationToken cancellationToken)
+    {
+        var item = (await Repository.Get(x => x.Id.Value == itemId, cancellationToken)).FirstOrDefault() ??
+            throw new ItemNotFoundException(itemId);
+        await Repository.Remove(item, cancellationToken);
     }
 }

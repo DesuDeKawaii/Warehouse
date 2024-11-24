@@ -164,5 +164,18 @@ namespace warehouse_management_application.Storages
             await Repository.Update(currentStorage, cancellationToken);
             await Repository.Update(targetStorage, cancellationToken);
         }
+
+        public async Task GetStorageById(Guid storageId, CancellationToken cancellationToken)
+        {
+            var item = (await Repository.Get(x => x.Id.Value == storageId, cancellationToken)).FirstOrDefault() ??
+                throw new StorageNotFoundException(storageId);
+        }
+
+        public async Task DeleteStorageAsync(Guid storageId, CancellationToken cancellationToken = default)
+        {
+            var potentialStorage = (await Repository.Get(x => x.Id.Value == storageId, cancellationToken)).FirstOrDefault() ??
+                throw new StorageNotFoundException(storageId);
+            await Repository.Remove(potentialStorage, cancellationToken);
+        }
     }
 }

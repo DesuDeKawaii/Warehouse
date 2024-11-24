@@ -1,0 +1,6 @@
+﻿namespace warehouse_management_api.Endpoints
+{
+    public class StorageEndPoint
+    {
+    }
+}
