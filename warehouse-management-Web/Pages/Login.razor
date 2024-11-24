@@ -1,0 +1,26 @@
+﻿@page "/login"
+@layout AppLayout
+@inject NavigationManager nav;
+
+<section>
+    <legend>Welcome!</legend>
+    <div>
+      <label class="form-label mt-4">Login</label>
+      <input class="form-control" placeholder="Enter login">
+      <small id="Help" class="form-text text-muted">How's it going? Huh...</small>
+    </div>
+    <div>
+      <label for="Password" class="form-label mt-4">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" autocomplete="off">
+    </div>
+    <button type="submit" class="btn btn-primary mt-4" @onclick="LoginClick">Login</button>
+</section>
+
+@code{
+    private void NavigateToHome() => nav.NavigateTo("/Home");
+
+    private void LoginClick()
+    {
+        // auth
+    }
+}

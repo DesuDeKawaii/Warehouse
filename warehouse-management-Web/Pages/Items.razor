@@ -1,0 +1,63 @@
+﻿@using warehouse_management_application.Items
+@using warehouse_management_core
+@using warehouse_management_core.DTO_s
+@using warehouse_management_core.Entities
+@using warehouse_management_application
+@using warehouse_management_core.Exceptions
+@page "/items"
+@layout AppLayout
+@inject ItemService Repository
+@inject NavigationManager NavigationManager
+<PageTitle>Items</PageTitle>
+
+<div class="banner">
+    <h1>Каталог товаров</h1>
+</div>
+
+<section class="item-section">
+    <div class="item-grid">
+        <ul class="item-cards">
+            @if (itemsDTO != null && itemsDTO.Any())
+            {
+                foreach (var item in itemsDTO)
+                {
+                    <li class="card" @onclick="() => OnProductClick(item)">
+                        <img src="@item.Description" alt="@item.Name" />
+                        <div class="card-body">
+                            <span class="title">@item.Name</span>
+                            <span class="price">@item.Price ₽</span>
+                        </div>
+                    </li>
+                }
+            }
+            else
+            {
+                <span>Items not found</span>
+            }
+        </ul>
+    </div>
+</section>
+
+@code {
+    private IEnumerable<ItemDTO> itemsDTO;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var items = await Repository.GetItemsAsync();
+        itemsDTO = items.Select(other => new ItemDTO
+            {
+                Id = other.Id,
+                Name = other.Name,
+                Description = other.Description,
+                ExpirationDate = other.ExpirationDate,
+                Temperature = other.Temperature,
+                Price = other.Price
+
+            }).ToList();
+    }
+
+    private void OnProductClick(ItemDTO item)
+    {
+        NavigationManager.NavigateTo($"/ItemCard/{item.Id}");
+    }
+}

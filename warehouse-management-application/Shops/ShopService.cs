@@ -146,10 +146,11 @@ public class ShopService(IRepository<Shop> repository) : IServise
         await Repository.Update(targetShop, cancellationToken);
     }
 
-    public async Task GetShopById(Guid shopId, CancellationToken cancellationToken)
+    public async Task<Shop> GetShopById(Guid shopId, CancellationToken cancellationToken)
     {
         var shop = (await Repository.Get(x => x.Id.Value == shopId, cancellationToken)).FirstOrDefault() ??
             throw new ShopNotFoundException(shopId);
+        return shop;
     }
 
     public async Task DeleteShop(Guid shopId, CancellationToken cancellationToken)

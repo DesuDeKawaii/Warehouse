@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\warehouse-management-Web.props" />
+</Project>

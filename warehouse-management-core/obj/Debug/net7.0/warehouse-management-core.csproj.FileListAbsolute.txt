@@ -1,0 +1,12 @@
+C:\Users\Дмитрий\Desktop\Warehouse\Warehouse-management\warehouse-management-core\bin\Debug\net7.0\warehouse-management-core.deps.json
+C:\Users\Дмитрий\Desktop\Warehouse\Warehouse-management\warehouse-management-core\bin\Debug\net7.0\warehouse-management-core.dll
+C:\Users\Дмитрий\Desktop\Warehouse\Warehouse-management\warehouse-management-core\bin\Debug\net7.0\warehouse-management-core.pdb
+C:\Users\Дмитрий\Desktop\Warehouse\Warehouse-management\warehouse-management-core\obj\Debug\net7.0\warehouse-management-core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Дмитрий\Desktop\Warehouse\Warehouse-management\warehouse-management-core\obj\Debug\net7.0\warehouse-management-core.AssemblyInfoInputs.cache
+C:\Users\Дмитрий\Desktop\Warehouse\Warehouse-management\warehouse-management-core\obj\Debug\net7.0\warehouse-management-core.AssemblyInfo.cs
+C:\Users\Дмитрий\Desktop\Warehouse\Warehouse-management\warehouse-management-core\obj\Debug\net7.0\warehouse-management-core.csproj.CoreCompileInputs.cache
+C:\Users\Дмитрий\Desktop\Warehouse\Warehouse-management\warehouse-management-core\obj\Debug\net7.0\warehouse-management-core.sourcelink.json
+C:\Users\Дмитрий\Desktop\Warehouse\Warehouse-management\warehouse-management-core\obj\Debug\net7.0\warehouse-management-core.dll
+C:\Users\Дмитрий\Desktop\Warehouse\Warehouse-management\warehouse-management-core\obj\Debug\net7.0\refint\warehouse-management-core.dll
+C:\Users\Дмитрий\Desktop\Warehouse\Warehouse-management\warehouse-management-core\obj\Debug\net7.0\warehouse-management-core.pdb
+C:\Users\Дмитрий\Desktop\Warehouse\Warehouse-management\warehouse-management-core\obj\Debug\net7.0\ref\warehouse-management-core.dll

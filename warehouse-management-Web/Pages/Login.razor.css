@@ -1,0 +1,22 @@
+﻿section {
+    margin: auto;
+    gap: 18px;
+}
+
+.logo {
+    align-self: center;
+    text-align: center;
+}
+
+.App {
+    font-size: 20px;
+}
+
+.login {
+    border-radius: 10px;
+}
+
+
+.login > *:focus-visible {
+    outline-color: #2bbee7;
+}

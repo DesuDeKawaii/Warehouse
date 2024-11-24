@@ -1,0 +1,100 @@
+﻿@page "/storage"
+@layout AppLayout
+@inject NavigationManager nav;
+
+<PageTitle>Storages</PageTitle>
+
+<section class="section" id="products">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-heading">
+                    <h2> Available storages</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="item">
+                    <div class="thumb">
+                        <img src="*" alt="">
+                    </div>
+                    <div class="down-content">
+                            <button class="btn btn-primary mt-4">NameOfStorage</button>
+                        <span>$120.00</span>                       
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="item">
+                    <div class="thumb">
+                        <div class="hover-content">
+                           
+                        </div>
+                        <img src="*" alt="">
+                    </div>
+                    <div class="down-content">
+                        <button class="btn btn-primary mt-4">NameOfStorage</button>
+                        <span>$90.00</span>                     
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="item">
+                    <div class="thumb">               
+                        <img src="*" alt="">
+                    </div>
+                    <div class="down-content">
+                        <button class="btn btn-primary mt-4">NameOfStorage</button>
+                        <span>$150.00</span>                      
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="item">
+                    <div class="thumb">
+                       <img src="*" alt="">
+                    </div>
+                    <div class="down-content">
+                        <button class="btn btn-primary mt-4">NameOfStorage</button>
+                        <span>$75.00</span>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="item">
+                    <div class="thumb">
+                        
+                        <img src="*" alt="">
+                    </div>
+                    <div class="down-content">
+                        <button class="btn btn-primary mt-4">NameOfStorage</button>
+                        <span>$45.00</span>
+            
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="item">
+                    <div class="thumb">
+                        
+                        <img src="*" alt="">
+                    </div>
+                    <div class="down-content">
+                        <button class="btn btn-primary mt-4">NameOfStorage</button>
+                        <span>$130.00</span>                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+@code {
+
+    private void LoginClick() => nav.NavigateTo("/Storage");
+}

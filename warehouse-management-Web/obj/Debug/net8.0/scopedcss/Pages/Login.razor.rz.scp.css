@@ -1,0 +1,22 @@
+section[b-w46qpr291t] {
+    margin: auto;
+    gap: 18px;
+}
+
+.logo[b-w46qpr291t] {
+    align-self: center;
+    text-align: center;
+}
+
+.App[b-w46qpr291t] {
+    font-size: 20px;
+}
+
+.login[b-w46qpr291t] {
+    border-radius: 10px;
+}
+
+
+.login > *:focus-visible[b-w46qpr291t] {
+    outline-color: #2bbee7;
+}

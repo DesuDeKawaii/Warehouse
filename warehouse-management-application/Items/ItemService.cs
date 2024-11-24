@@ -40,10 +40,11 @@ public class ItemService(IRepository<Item> repository) : IServise
         else
             await Repository.Update(localitem, cancellationToken);
     }
-    public async Task GetItemById(Guid itemId, CancellationToken cancellationToken)
+    public async Task<Item> GetItemById(Guid itemId, CancellationToken cancellationToken)
     {
         var item = (await Repository.Get(x => x.Id.Value == itemId, cancellationToken)).FirstOrDefault() ?? 
-            throw new ItemNotFoundException(itemId); 
+            throw new ItemNotFoundException(itemId);
+        return item;
     }
 
     public async Task DeleteItemById(Guid itemId, CancellationToken cancellationToken)
@@ -51,5 +52,6 @@ public class ItemService(IRepository<Item> repository) : IServise
         var item = (await Repository.Get(x => x.Id.Value == itemId, cancellationToken)).FirstOrDefault() ??
             throw new ItemNotFoundException(itemId);
         await Repository.Remove(item, cancellationToken);
+
     }
 }

@@ -1,0 +1,33 @@
+main {
+    display: flex;
+    align-self:auto;
+    align-items: start;
+}
+.h1 {
+    display: flex;
+    align-self: center;
+    align-items: center;
+}
+
+.func-button {
+    flex-direction: row;
+    gap: 9px;
+    margin: auto;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 10px;
+}
+
+.app-grid {
+    display: grid;
+    grid-template-rows: 5vh 87vh 5vh;
+    min-height: inherit;
+}
+footer {
+    padding: 1.5rem 0;
+    text-align: center;
+}

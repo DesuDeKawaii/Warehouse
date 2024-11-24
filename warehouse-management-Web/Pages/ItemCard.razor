@@ -1,0 +1,54 @@
+﻿@page "/ItemCard/{ItemId:guid}"
+@using warehouse_management_application.Items
+@using warehouse_management_core.DTO_s
+@inject ItemService Repository
+<div class="item-detail">
+    @if (ItemsDTO != null)
+    {
+        <div class="item-main">
+            <div class="image-section">
+                <div class="main-image">
+                    <img src="@ItemsDTO.Description" alt="@ItemsDTO.Name" />
+                </div>
+            </div>
+
+            <div class="item-content">
+                <h1 class="item-title">@ItemsDTO.Name</h1>
+                <p class="item-price">@ItemsDTO.Price руб.</p>
+                <p class="item-description">@ItemsDTO.Description</p>
+            </div>
+        </div>
+    }
+    else
+    {
+        <span>Товар не найден</span>
+    }
+</div>
+
+@code {
+    [Parameter]
+    public Guid ItemId { get; set; }
+    public CancellationToken cancellationToken = new CancellationToken();
+    private ItemDTO ItemsDTO;
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        var item = await Repository.GetItemById(ItemId, cancellationToken);
+        if (item != null)
+        {
+            ItemsDTO = new ItemDTO
+                {
+                    Id = item.Id,
+                    Name = item.Name,
+                    Description = item.Description,
+                    ExpirationDate = item.ExpirationDate,
+                    Temperature = item.Temperature,
+                    Price = item.Price
+                };
+        }
+    }
+
+
+
+}
