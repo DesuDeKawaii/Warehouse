@@ -16,76 +16,104 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-lg-4">
+            <div class="col-lg-6">
+                <div class="thumb">
+                    <img src="*" alt="">
+                </div>
+                <form method="POST">
+                    <div>
+                        <input type="text" name="name" placeholder="Название" />
+                    </div>
+                    <div>
+                        <textarea name="description" placeholder="Описание" />
+                    </div>
+                    <div>
+                        <input type="text" name="capacity" placeholder="Вместимость" />
+                        <input type="text" name="temperature" placeholder="Температура" />
+                    </div>
+                    <div>
+                        <input type="text" name="longitude" placeholder="Долгота" />
+                        <input type="text" name="latitude" placeholder="Широта" />
+                    </div>
+                    <div>
+                        <button class="btn btn-primary" name="create" value="create">Добавить</button>
+                    </div>
+                </form>
+            </div>
+            <!-- С этого момента начинается объект. Из бд достать все склады и пустить в цикл с выводом этого контейнера -->
+            <div class="col-lg-6">
                 <div class="item">
                     <div class="thumb">
                         <img src="*" alt="">
                     </div>
-                    <div class="down-content">
-                            <button class="btn btn-primary mt-4">NameOfStorage</button>
-                        <span>$120.00</span>                       
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="item">
-                    <div class="thumb">
-                        <div class="hover-content">
-                           
+                    <div class="down-content" data-item="1">
+                        <!-- 
+                            Данные в data-item вставляются от id элемента. Это позволит менять только один элемент в бд, а не все.
+                            Также можно это делать в значениях кнопок сохранить и удалить, но изменять нужно 2 кнопки
+                        -->
+                        <h3 contenteditable="true" name="name">Name</h3>
+                        <p contenteditable="true" name="description">Description</p>
+                        <div class="row">
+                            <p class="col-lg-6" contenteditable="true" name="temperature">Temperature</p>
+                            <p class="col-lg-6" contenteditable="true" name="capacity">Capacity</p>
                         </div>
-                        <img src="*" alt="">
-                    </div>
-                    <div class="down-content">
-                        <button class="btn btn-primary mt-4">NameOfStorage</button>
-                        <span>$90.00</span>                     
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="item">
-                    <div class="thumb">               
-                        <img src="*" alt="">
-                    </div>
-                    <div class="down-content">
-                        <button class="btn btn-primary mt-4">NameOfStorage</button>
-                        <span>$150.00</span>                      
+                        <div class="row">
+                            <p class="col-lg-6" contenteditable="true" name="longitude">Longitude</p>
+                            <p class="col-lg-6" contenteditable="true" name="latitude">Latitude</p>
+                        </div>
+                        <div class="btn-div">
+                            <button class="btn btn-primary mt-4" name="save" value="save">Сохранить</button>
+                            <button class="btn btn-primary mt-4" name="delete value="delete>Удалить</button>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4">
+            <!-- Конец элемента -->
+            <div class="col-lg-6">
                 <div class="item">
                     <div class="thumb">
-                       <img src="*" alt="">
+                        <img src="*" alt="">
                     </div>
-                    <div class="down-content">
-                        <button class="btn btn-primary mt-4">NameOfStorage</button>
-                        <span>$75.00</span>
-                        
+                    <div class="down-content" data-item="1">
+                        <h3 contenteditable="true" name="name">Name</h3>
+                        <p contenteditable="true" name="description">Description</p>
+                        <div class="row">
+                            <p class="col-lg-6" contenteditable="true" name="expirationDate">expirationDate</p>
+                            <p class="col-lg-6" contenteditable="true" name="temperature">Temperature</p>
+                        </div>
+                        <p contenteditable="true" name="price">Price</p>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-6">
                 <div class="item">
                     <div class="thumb">
-                        
                         <img src="*" alt="">
                     </div>
-                    <div class="down-content">
-                        <button class="btn btn-primary mt-4">NameOfStorage</button>
-                        <span>$45.00</span>
-            
+                    <div class="down-content" data-item="1">
+                        <h3 contenteditable="true" name="name">Name</h3>
+                        <p contenteditable="true" name="description">Description</p>
+                        <div class="row">
+                            <p class="col-lg-6" contenteditable="true" name="expirationDate">expirationDate</p>
+                            <p class="col-lg-6" contenteditable="true" name="temperature">Temperature</p>
+                        </div>
+                        <p contenteditable="true" name="price">Price</p>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-6">
                 <div class="item">
                     <div class="thumb">
-                        
                         <img src="*" alt="">
                     </div>
-                    <div class="down-content">
-                        <button class="btn btn-primary mt-4">NameOfStorage</button>
-                        <span>$130.00</span>                      
+                    <div class="down-content" data-item="1">
+                        <h3 contenteditable="true" name="name">Name</h3>
+                        <p contenteditable="true" name="description">Description</p>
+                        <div class="row">
+                            <p class="col-lg-6" contenteditable="true" name="expirationDate">expirationDate</p>
+                            <p class="col-lg-6" contenteditable="true" name="temperature">Temperature</p>
+                        </div>
+                        <p contenteditable="true" name="price">Price</p>
                     </div>
                 </div>
             </div>
@@ -98,3 +126,23 @@
 
     private void LoginClick() => nav.NavigateTo("/Storage");
 }
+
+
+<!--
+    Если через js, то вот код для данных. Дальше уже можно отправить в бд
+
+    document.querySelectorAll(".dtn-div>button").forEach(btn => {
+        btn.addEventListener('click', event => {
+            let item = event.target.ParentElement.ParentElement;
+            let storageId = item.getAttribute("data-item");
+            let storageName = item.querySelector("h3").value;
+            let childsP = item.querySelector("p");
+            let storageDescription = childsP[0].value;
+            let storageTemperature = childsP[1].value;
+            let storageCapacity = childsP[2].value;
+            let storageLongitude = childsP[3].value;
+            let storageLatitude = childsP[4].value;
+        });
+    });
+
+-->

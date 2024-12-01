@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "warehouse-management-Web",
   "resources": {
-    "hash": "sha256-EmyY2sktSsBkgO62WqKDLaPoaTVBiCBPPBY9q7+fT+E=",
+    "hash": "sha256-GjbUFdYpPK0XFsX3cVGFRlogrctdHf/QBgqKbZLqFOg=",
     "jsModuleNative": {
       "dotnet.native.8.0.5.lq43c521pl.js": "sha256-boyHe+0RMZDkzBKGhsrnXPhPg3oZ6UqJnTUzngJPjNY="
     },
@@ -245,14 +245,14 @@
       "warehouse-management-applicationtests.wasm": "sha256-Wd/IOH+Zr9h5oDYp2Ah4kjuOKwOODkEkwTESDHFvvCU=",
       "warehouse-management-core.wasm": "sha256-WnQj+vrCjD+mRyf4O2YCHl1KPohGTeWMl1UDhF3AUMs=",
       "warehouse-management-infrastructure.wasm": "sha256-TKBPAMD5qKVIN7+tELig13FB/FlRxDIg4zgpBmvyGhs=",
-      "warehouse-management-Web.wasm": "sha256-fM19y/6beRWpSi1rVsMtXm9IJ4KkYoDxskST1+PKEiU="
+      "warehouse-management-Web.wasm": "sha256-3Orpv+UjKSs3nODgF5Oq89rCq4XM64KkEcBgfgwGJEc="
     },
     "pdb": {
       "warehouse-management-core.pdb": "sha256-Jny11f5uDSbw30pkgbzEZ6QXqp7LmJqP+ryonI4CVHo=",
       "warehouse-management-infrastructure.pdb": "sha256-8SJG2nFbsu8G+bjuyfE0TpLK2Phcr8Cjao9v6Lbg7SE=",
       "warehouse-management-application.pdb": "sha256-5CNQN4e8Dtyo7Szb8RFKM51m8bSo6ZRae6s9XcW3wJc=",
       "warehouse-management-applicationtests.pdb": "sha256-nPHxfIX0YekT1toZ4UT0USB+XuhjYIarCcBh4VN4GCE=",
-      "warehouse-management-Web.pdb": "sha256-o7tLgc0WUdOjEwTD/4NHIPuVjI/pH5/mhGpkopEdPHQ="
+      "warehouse-management-Web.pdb": "sha256-6ofU8WGqkxc1Q+SKTLd3OHIC1S6fBGYO/0BY9OALRfQ="
     }
   },
   "cacheBootResources": true,

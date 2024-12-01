@@ -1,8 +1,3 @@
-main[b-61j6ddf4tt] {
-    display: flex;
-    align-self:auto;
-    align-items: start;
-}
 .h1[b-61j6ddf4tt] {
     display: flex;
     align-self: center;
@@ -19,14 +14,24 @@ header[b-61j6ddf4tt] {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 0 10px;
+    align-items: center;
+    height: 56px;
+}
+
+.logo[b-61j6ddf4tt] {
+    padding: 0 40px;
+}
+
+main[b-61j6ddf4tt] {
+    background-image: linear-gradient(#17082e 0, #1a0933 7%, #1a0933 80%, #0c1f4c 100%);
 }
 
 .app-grid[b-61j6ddf4tt] {
     display: grid;
-    grid-template-rows: 5vh 87vh 5vh;
-    min-height: inherit;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
 }
+
 footer[b-61j6ddf4tt] {
     padding: 1.5rem 0;
     text-align: center;

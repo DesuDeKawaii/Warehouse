@@ -14,16 +14,26 @@
     }
 
     #products .item .down-content[b-eapt9cx4p4] {
-        padding-top: 20px;
+        padding: 20px;
         position: relative;
         z-index: 3;
-
+        border: 1px solid #6f42c1;
+        border-radius: 20px;
     }
 
-        #products .item .down-content h4[b-eapt9cx4p4] {
+        #products .item .down-content h3[b-eapt9cx4p4] {
             font-size: 22px;
             font-weight: 700;
             margin-bottom: 8px;
+        }
+
+        #products .item .down-content h3[b-eapt9cx4p4], p[b-eapt9cx4p4] {
+            text-align: center;
+        }
+
+        #products .item .down-content .btn-div[b-eapt9cx4p4] {
+            display: flex;
+            justify-content: space-around;
         }
 
         #products .item .down-content span[b-eapt9cx4p4] {
@@ -76,3 +86,35 @@
                 line-height: 50px;
                 display: inline-block;
             }
+
+form[b-eapt9cx4p4] {
+    border: 1px solid #6f42c1;
+    border-radius: 20px;
+}
+
+    form div[b-eapt9cx4p4] {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    form input[b-eapt9cx4p4], textarea[b-eapt9cx4p4] {
+        border: 1px solid #fff;
+        border-radius: 10px;
+        padding: 5px 10px;
+        margin: 6px;
+        width: 250px;
+        background-color: #6f42c1;
+        color: #fff;
+    }
+
+        form input[b-eapt9cx4p4]::placeholder, textarea[b-eapt9cx4p4]::placeholder {
+            color: #d5c8e9;
+        }
+
+    form textarea[b-eapt9cx4p4] {
+        resize: none;
+    }
+
+    form button[name="create"][b-eapt9cx4p4] {
+        margin: 5px;
+    }

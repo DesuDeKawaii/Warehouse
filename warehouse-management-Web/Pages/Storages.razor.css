@@ -14,16 +14,26 @@
     }
 
     #products .item .down-content {
-        padding-top: 20px;
+        padding: 20px;
         position: relative;
         z-index: 3;
-
+        border: 1px solid #6f42c1;
+        border-radius: 20px;
     }
 
-        #products .item .down-content h4 {
+        #products .item .down-content h3 {
             font-size: 22px;
             font-weight: 700;
             margin-bottom: 8px;
+        }
+
+        #products .item .down-content h3, p {
+            text-align: center;
+        }
+
+        #products .item .down-content .btn-div {
+            display: flex;
+            justify-content: space-around;
         }
 
         #products .item .down-content span {
@@ -76,3 +86,35 @@
                 line-height: 50px;
                 display: inline-block;
             }
+
+form {
+    border: 1px solid #6f42c1;
+    border-radius: 20px;
+}
+
+    form div {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    form input, textarea {
+        border: 1px solid #fff;
+        border-radius: 10px;
+        padding: 5px 10px;
+        margin: 6px;
+        width: 250px;
+        background-color: #6f42c1;
+        color: #fff;
+    }
+
+        form input::placeholder, textarea::placeholder {
+            color: #d5c8e9;
+        }
+
+    form textarea {
+        resize: none;
+    }
+
+    form button[name="create"] {
+        margin: 5px;
+    }

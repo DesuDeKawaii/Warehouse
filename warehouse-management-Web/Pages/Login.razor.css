@@ -1,6 +1,13 @@
 ﻿section {
     margin: auto;
     gap: 18px;
+    text-align: center;
+}
+
+section>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .logo {
@@ -16,6 +23,10 @@
     border-radius: 10px;
 }
 
+.form-control {
+    margin: auto;
+    width: 20%;
+}
 
 .login > *:focus-visible {
     outline-color: #2bbee7;

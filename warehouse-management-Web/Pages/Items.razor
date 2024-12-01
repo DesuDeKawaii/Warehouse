@@ -6,58 +6,37 @@
 @using warehouse_management_core.Exceptions
 @page "/items"
 @layout AppLayout
-@inject ItemService Repository
 @inject NavigationManager NavigationManager
+@inject ItemService ItemService
+
 <PageTitle>Items</PageTitle>
 
-<div class="banner">
-    <h1>Каталог товаров</h1>
-</div>
 
-<section class="item-section">
-    <div class="item-grid">
-        <ul class="item-cards">
-            @if (itemsDTO != null && itemsDTO.Any())
-            {
-                foreach (var item in itemsDTO)
-                {
-                    <li class="card" @onclick="() => OnProductClick(item)">
-                        <img src="@item.Description" alt="@item.Name" />
-                        <div class="card-body">
-                            <span class="title">@item.Name</span>
-                            <span class="price">@item.Price ₽</span>
-                        </div>
-                    </li>
-                }
-            }
-            else
-            {
-                <span>Items not found</span>
-            }
-        </ul>
-    </div>
-</section>
+<h3>Items List</h3>
+
+@if (items == null)
+{
+    <p>Loading...</p>
+}
+else if (!items.Any())
+{
+    <p>No items found.</p>
+}
+else
+{
+    <ul>
+        @foreach (var item in items)
+        {
+            <li>@item.Name - @item.Price</li>
+        }
+    </ul>
+}
 
 @code {
-    private IEnumerable<ItemDTO> itemsDTO;
+    private IEnumerable<ItemDTO> items;
 
     protected override async Task OnInitializedAsync()
     {
-        var items = await Repository.GetItemsAsync();
-        itemsDTO = items.Select(other => new ItemDTO
-            {
-                Id = other.Id,
-                Name = other.Name,
-                Description = other.Description,
-                ExpirationDate = other.ExpirationDate,
-                Temperature = other.Temperature,
-                Price = other.Price
-
-            }).ToList();
-    }
-
-    private void OnProductClick(ItemDTO item)
-    {
-        NavigationManager.NavigateTo($"/ItemCard/{item.Id}");
+        items = await ItemService.GetItemsAsync();
     }
 }
