@@ -12,7 +12,6 @@ namespace warehouse_management_api.Endpoints;
 
 public static class StorageEndPoint
 {
-
     public static void MapStorageEndpoints(this IEndpointRouteBuilder routes)
     {
         routes.MapPost("api/storage/create", CreateStorage).WithTags("Storage");
@@ -21,28 +20,26 @@ public static class StorageEndPoint
         routes.MapDelete("api/storage/{storageId}", DeleteStorage).WithTags("Storage");
     }
 
-    [HttpGet]
-    private static async Task<IResult> GetItemById(Guid itemId,StorageDTO storage, StorageService service, HttpContext context, ILogger logger, CancellationToken cancellationToken)
+    private static async Task<IResult> GetItemById(Guid itemId, [FromServices] StorageService service, [FromServices] ILogger<StorageService> logger, CancellationToken cancellationToken)
     {
         try
         {
             await service.GetStoragesItemsAsync(itemId, cancellationToken);
             return Results.Ok();
         }
-        catch (ItemNotFoundException ex) 
+        catch (ItemNotFoundException ex)
         {
             logger.LogError(ex, "Failed to find item.");
             return Results.BadRequest($"An item with ID '{itemId}' is not found.");
         }
         catch (ItemOutOfStockException ex)
         {
-            logger.LogError(ex, "Failed to find item.");
+            logger.LogError(ex, "Item is out of stock.");
             return Results.BadRequest($"An item with ID '{itemId}' is out of stock.");
         }
     }
 
-    [HttpPost]
-    public static async Task<IResult> CreateStorage(StorageDTO storage, StorageService service, HttpContext context, ILogger logger)
+    public static async Task<IResult> CreateStorage(StorageDTO storage, [FromServices] StorageService service, [FromServices] ILogger<StorageService> logger)
     {
         try
         {
@@ -61,14 +58,12 @@ public static class StorageEndPoint
         }
     }
 
-    [HttpGet]
-    public static async Task<IResult> GetStorage(Guid storageId, StorageService service, ILogger logger, CancellationToken cancellationToken)
+    public static async Task<IResult> GetStorage(Guid storageId, [FromServices] StorageService service, [FromServices] ILogger<StorageService> logger, CancellationToken cancellationToken)
     {
         try
         {
             await service.GetStorageById(storageId, cancellationToken);
             return Results.Ok();
-
         }
         catch (ItemNotFoundException ex)
         {
@@ -77,13 +72,12 @@ public static class StorageEndPoint
         }
         catch (Exception ex)
         {
-            logger.LogError(ex, "An error occurred while creating the storage.");
+            logger.LogError(ex, "An error occurred while retrieving the storage.");
             return Results.StatusCode(StatusCodes.Status500InternalServerError);
         }
     }
 
-    [HttpDelete]
-    public static async Task<IResult> DeleteStorage(Guid storageId, StorageService service, ILogger logger, CancellationToken cancellationToken)
+    public static async Task<IResult> DeleteStorage(Guid storageId, [FromServices] StorageService service, [FromServices] ILogger<StorageService> logger, CancellationToken cancellationToken)
     {
         try
         {
@@ -97,9 +91,9 @@ public static class StorageEndPoint
         }
         catch (Exception ex)
         {
-            logger.LogError(ex, "An error occurred while creating the storage.");
+            logger.LogError(ex, "An error occurred while deleting the storage.");
             return Results.StatusCode(StatusCodes.Status500InternalServerError);
         }
     }
-
 }
+

@@ -1,13 +1,6 @@
 section[b-w46qpr291t] {
     margin: auto;
     gap: 18px;
-    text-align: center;
-}
-
-section>div[b-w46qpr291t] {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 .logo[b-w46qpr291t] {
@@ -23,10 +16,6 @@ section>div[b-w46qpr291t] {
     border-radius: 10px;
 }
 
-.form-control[b-w46qpr291t] {
-    margin: auto;
-    width: 20%;
-}
 
 .login > *:focus-visible[b-w46qpr291t] {
     outline-color: #2bbee7;

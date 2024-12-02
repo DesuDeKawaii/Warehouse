@@ -10,7 +10,6 @@ namespace warehouse_management_api.Endpoints;
 
 public static class ItemEndPoint
 {
-
     public static void MapItemEndpoints(this IEndpointRouteBuilder routes)
     {
         routes.MapPost("api/item/create", CreateItem).WithTags("Item");
@@ -19,10 +18,7 @@ public static class ItemEndPoint
         routes.MapDelete("api/item/{itemId}", DeleteItem).WithTags("Item");
     }
 
-
-
-    [HttpPost]
-    public static async Task<IResult> CreateItem(ItemDTO item, ItemService service, HttpContext context, ILogger logger)
+    public static async Task<IResult> CreateItem(ItemDTO item, ItemService service, ILogger<ItemService> logger)
     {
         try
         {
@@ -41,12 +37,12 @@ public static class ItemEndPoint
         }
     }
 
-    [HttpGet]
-    public async static Task<IResult> GetItem(ItemService service, CancellationToken cancellationToken)
+    public static async Task<IResult> GetItem(ItemService service, CancellationToken cancellationToken)
     {
         try
         {
-            return Results.Ok(await service.GetItemsAsync(cancellationToken));
+            var items = await service.GetItemsAsync(cancellationToken);
+            return Results.Ok(items);
         }
         catch (Exception ex)
         {
@@ -54,14 +50,12 @@ public static class ItemEndPoint
         }
     }
 
-    [HttpGet]
-    public static async Task<IResult> GetItemById(Guid itemId, ItemService service, ILogger logger, CancellationToken cancellationToken)
+    public static async Task<IResult> GetItemById(Guid itemId, ItemService service, ILogger<ItemService> logger, CancellationToken cancellationToken)
     {
         try
         {
-            await service.GetItemById(itemId, cancellationToken);
-            return Results.Ok();
-
+            var item = await service.GetItemById(itemId, cancellationToken);
+            return Results.Ok(item);
         }
         catch (ItemNotFoundException ex)
         {
@@ -70,13 +64,12 @@ public static class ItemEndPoint
         }
         catch (Exception ex)
         {
-            logger.LogError(ex, "An error occurred while creating the item.");
+            logger.LogError(ex, "An error occurred while retrieving the item.");
             return Results.StatusCode(StatusCodes.Status500InternalServerError);
         }
     }
 
-    [HttpDelete]
-    public static async Task<IResult> DeleteItem(Guid itemId, ItemService service, ILogger logger, CancellationToken cancellationToken)
+    public static async Task<IResult> DeleteItem(Guid itemId, ItemService service, ILogger<ItemService> logger, CancellationToken cancellationToken)
     {
         try
         {
@@ -90,9 +83,10 @@ public static class ItemEndPoint
         }
         catch (Exception ex)
         {
-            logger.LogError(ex, "An error occurred while creating the item.");
+            logger.LogError(ex, "An error occurred while deleting the item.");
             return Results.StatusCode(StatusCodes.Status500InternalServerError);
         }
     }
-
 }
+
+

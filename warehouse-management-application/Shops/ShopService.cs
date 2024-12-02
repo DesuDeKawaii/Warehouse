@@ -12,7 +12,7 @@ namespace warehouse_management_application.Shops;
 public class ShopService(IRepository<Shop> repository) : IServise
 {
     private IRepository<Shop> Repository { get; init; } = repository;
-    private IMapProvider MapProvider { get; init; }
+    //private IMapProvider MapProvider { get; init; }
     private IRepository<Storage> StorageRepository { get; init; }
 
     public async Task<IEnumerable<ShopDTO>> GetShopAsync(CancellationToken cancellationToken = default) =>

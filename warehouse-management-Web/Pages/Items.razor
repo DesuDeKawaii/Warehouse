@@ -4,10 +4,12 @@
 @using warehouse_management_core.Entities
 @using warehouse_management_application
 @using warehouse_management_core.Exceptions
+@using warehouse_management_infrastructure.Db
 @page "/items"
 @layout AppLayout
 @inject NavigationManager NavigationManager
 @inject ItemService ItemService
+@inject HttpClient Http
 
 <PageTitle>Items</PageTitle>
 
@@ -33,10 +35,12 @@ else
 }
 
 @code {
-    private IEnumerable<ItemDTO> items;
+    private List<Item> items;
 
     protected override async Task OnInitializedAsync()
     {
-        items = await ItemService.GetItemsAsync();
+        //items = await Http.GetFromJsonAsync<List<Item>>("http://localhost:5262/api/items");
+
+       items = await Http.GetFromJsonAsync<List<Item>>("https://localhost:7110/api/items");
     }
 }

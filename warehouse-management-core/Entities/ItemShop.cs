@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace warehouse_management_core.Entities
 {
-    public class ItemShop : IEntity
+    public class ItemShop
     {
         public Id Id { get; set; }
         public int Amount { get; set; }

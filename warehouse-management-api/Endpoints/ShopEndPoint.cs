@@ -12,7 +12,6 @@ namespace warehouse_management_api.Endpoints;
 
 public static class ShopEndPoint
 {
-
     public static void MapShopEndpoints(this IEndpointRouteBuilder routes)
     {
         routes.MapPost("api/shop/create", CreateShop).WithTags("Shop");
@@ -21,11 +20,11 @@ public static class ShopEndPoint
         routes.MapDelete("api/shop/{shopId}", DeleteShop).WithTags("Shop");
     }
 
-    private static async Task<IResult> GetItemById(Guid shopId, Guid itemId, ItemShop shop, ShopService service, ILogger logger, CancellationToken cancellationToken)
+    private static async Task<IResult> GetItemById(Guid shopId, Guid itemId, [FromBody] ItemShop shop, [FromServices] ShopService service, [FromServices] ILogger<ShopService> logger, CancellationToken cancellationToken)
     {
         try
         {
-            await service.GetItemFromShop(shopId, itemId,shop, cancellationToken);
+            await service.GetItemFromShop(shopId, itemId, shop, cancellationToken);
             return Results.Ok();
         }
         catch (ShopNotFoundException ex)
@@ -41,7 +40,7 @@ public static class ShopEndPoint
     }
 
     [HttpPost]
-    public static async Task<IResult> CreateShop(ShopDTO shop, ShopService service, ILogger logger)
+    public static async Task<IResult> CreateShop([FromBody] ShopDTO shop, [FromServices] ShopService service, [FromServices] ILogger<ShopService> logger)
     {
         try
         {
@@ -61,13 +60,12 @@ public static class ShopEndPoint
     }
 
     [HttpGet]
-    public static async Task<IResult> GetShop(Guid shopId, ShopService service, ILogger logger, CancellationToken cancellationToken)
+    public static async Task<IResult> GetShop(Guid shopId, [FromServices] ShopService service, [FromServices] ILogger<ShopService> logger, CancellationToken cancellationToken)
     {
         try
         {
             await service.GetShopById(shopId, cancellationToken);
             return Results.Ok();
-
         }
         catch (ItemNotFoundException ex)
         {
@@ -82,7 +80,7 @@ public static class ShopEndPoint
     }
 
     [HttpDelete]
-    public static async Task<IResult> DeleteShop(Guid shopId, ShopService service, ILogger logger, CancellationToken cancellationToken)
+    public static async Task<IResult> DeleteShop(Guid shopId, [FromServices] ShopService service, [FromServices] ILogger<ShopService> logger, CancellationToken cancellationToken)
     {
         try
         {
@@ -100,5 +98,6 @@ public static class ShopEndPoint
             return Results.StatusCode(StatusCodes.Status500InternalServerError);
         }
     }
-
 }
+
+
