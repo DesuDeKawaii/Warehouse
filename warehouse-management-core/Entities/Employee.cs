@@ -9,6 +9,6 @@ public class Employee : IEntity
     public double Salary { get; set; }
 
 
-    public virtual ICollection<Shop> Shops { get; set; }
-    public virtual ICollection<Storage> Storages { get; set; }
+    public virtual Shop? Shop { get; set; }
+    public virtual Storage? Storage { get; set; }
 }
