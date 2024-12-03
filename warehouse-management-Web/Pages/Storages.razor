@@ -1,101 +1,168 @@
 ﻿@page "/storage"
+@using warehouse_management_application.Storages
+@using warehouse_management_core.DTO_s
+@using warehouse_management_core.Entities
 @layout AppLayout
-@inject NavigationManager nav;
+@inject NavigationManager NavigationManager
+@inject HttpClient Http
 
 <PageTitle>Storages</PageTitle>
 
-<section class="section" id="products">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="section-heading">
-                    <h2> Available storages</h2>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="thumb">
-                    <img src="*" alt="">
-                </div>
-                <form method="POST">
-                    <div>
-                        <input type="text" name="name" placeholder="Название" />
-                    </div>
-                    <div>
-                        <textarea name="description" placeholder="Описание" />
-                    </div>
-                    <div>
-                        <input type="text" name="capacity" placeholder="Вместимость" />
-                        <input type="text" name="temperature" placeholder="Температура" />
-                    </div>
-                    <div>
-                        <input type="text" name="longitude" placeholder="Долгота" />
-                        <input type="text" name="latitude" placeholder="Широта" />
-                    </div>
-                    <div>
-                        <button class="btn btn-primary" name="create" value="create">Добавить</button>
-                    </div>
-                </form>
-            </div>
-            <!-- С этого момента начинается объект. Из бд достать все склады и пустить в цикл с выводом этого контейнера -->
-            <div class="col-lg-6">
-                <div class="item">
-                    <div class="thumb">
-                        <img src="*" alt="">
-                    </div>
-                    <div class="down-content" data-item="1">
-                        <!-- 
-                            Данные в data-item вставляются от id элемента. Это позволит менять только один элемент в бд, а не все.
-                            Также можно это делать в значениях кнопок сохранить и удалить, но изменять нужно 2 кнопки
-                        -->
-                        <h3 contenteditable="true" name="name">Name</h3>
-                        <p contenteditable="true" name="description">Description</p>
-                        <div class="row">
-                            <p class="col-lg-6" contenteditable="true" name="temperature">Temperature</p>
-                            <p class="col-lg-6" contenteditable="true" name="capacity">Capacity</p>
-                        </div>
-                        <div class="row">
-                            <p class="col-lg-6" contenteditable="true" name="longitude">Longitude</p>
-                            <p class="col-lg-6" contenteditable="true" name="latitude">Latitude</p>
-                        </div>
-                        <div class="btn-div">
-                            <button class="btn btn-primary mt-4" name="save" value="save">Сохранить</button>
-                            <button class="btn btn-primary mt-4" name="delete value="delete>Удалить</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Конец элемента -->
-            
-        </div>
-    </div>
-</section>
+<div class="container mt-4">
+    <h3 class="text-center">Storages List</h3>
 
+    @if (storages == null)
+    {
+        <p class="text-center">Loading...</p>
+    }
+    else if (!storages.Any())
+    {
+        <p class="text-center">No storages found.</p>
+    }
+    else
+    {
+        <div class="row">
+            @foreach (var storage in storages)
+            {
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">@storage.Name</h5>
+                            <p class="card-text">@storage.Description</p>
+                            <ul>
+                                <li><strong>Capacity:</strong> @storage.Capacity</li>
+                                <li><strong>Latitude:</strong> @storage.Latitude</li>
+                                <li><strong>Longitude:</strong> @storage.Longitude</li>
+                                <li><strong>Temperature:</strong> @storage.Temperature</li>
+                            </ul>
+                            <!-- Кнопка для перехода на детали склада -->
+                            @* <button class="btn btn-info" @onclick="() => NavigateToStorage(storage.Id.Value)">View Details</button> *@
+                            <button class="btn btn-danger" @onclick="() => HandleDeleteStorage(storage.Id.Value)">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+
+    <!-- Кнопка для создания нового склада -->
+    <div class="text-center mt-4">
+        <button class="btn btn-primary" @onclick="ShowCreateStorageForm">Create New Storage</button>
+    </div>
+
+    <!-- Create Storage Form -->
+    @if (showCreateForm)
+    {
+        <div class="mt-4">
+            <h3 class="text-center">Create New Storage</h3>
+            <EditForm Model="newStorage" OnValidSubmit="HandleCreateStorage" class="col-md-8 mx-auto">
+                <DataAnnotationsValidator />
+                <ValidationSummary />
+                <!-- Форма для создания склада -->
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="name">Name</label>
+                        <InputText id="name" class="form-control" @bind-Value="newStorage.Name" placeholder="Enter storage name" />
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="description">Description</label>
+                        <InputText id="description" class="form-control" @bind-Value="newStorage.Description" placeholder="Enter storage description" />
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="capacity">Capacity</label>
+                        <InputNumber id="capacity" class="form-control" @bind-Value="newStorage.Capacity" placeholder="Enter storage capacity" />
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="temperature">Temperature</label>
+                        <InputNumber id="temperature" class="form-control" @bind-Value="newStorage.Temperature" placeholder="Enter temperature" />
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="latitude">Latitude</label>
+                        <InputNumber id="latitude" class="form-control" @bind-Value="newStorage.Latitude" placeholder="Enter latitude" />
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="longitude">Longitude</label>
+                        <InputNumber id="longitude" class="form-control" @bind-Value="newStorage.Longitude" placeholder="Enter longitude" />
+                    </div>
+                </div>
+                <div class="text-center mt-3">
+                    <button class="btn btn-success" type="submit">Create Storage</button>
+                </div>
+            </EditForm>
+        </div>
+    }
+</div>
 
 @code {
+    [Parameter] public Guid storageId { get; set; }
+    private List<StorageDTO> storages;
+    private StorageDTO newStorage = new StorageDTO();
+    private bool showCreateForm = false;
+    private List<ItemStorage> itemStorage;
 
-    private void LoginClick() => nav.NavigateTo("/Storage");
+    protected override async Task OnInitializedAsync()
+    {
+        // Загрузка списка всех складов
+        storages = await Http.GetFromJsonAsync<List<StorageDTO>>("https://localhost:7110/api/storages");
+        
+    }
+
+    private void ShowCreateStorageForm()
+    {
+        // Показать форму для создания нового склада
+        showCreateForm = true;
+    }
+
+    private async Task HandleCreateStorage()
+    {
+        try
+        {
+            // Создание нового склада
+            var response = await Http.PostAsJsonAsync("https://localhost:7110/api/storage/create", newStorage);
+
+            if (response.IsSuccessStatusCode)
+            {
+                // Обновление списка складов после создания
+                storages = await Http.GetFromJsonAsync<List<StorageDTO>>("https://localhost:7110/api/storages");
+                showCreateForm = false; // Скрытие формы
+            }
+            else
+            {
+                Console.WriteLine("Error creating storage.");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error: {ex.Message}");
+        }
+    }
+
+    private async Task HandleDeleteStorage(Guid storageId)
+    {
+        try
+        {
+            // Удаление склада
+            var response = await Http.DeleteAsync($"https://localhost:7110/api/storage/{storageId}");
+
+            if (response.IsSuccessStatusCode)
+            {
+                // Обновление списка складов после удаления
+                storages = await Http.GetFromJsonAsync<List<StorageDTO>>("https://localhost:7110/api/storages");
+            }
+            else
+            {
+                Console.WriteLine("Error deleting storage.");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error: {ex.Message}");
+        }
+    }
+
+    private void NavigateToStorage(Guid storageId)
+    {
+        // Переход на страницу с подробностями склада
+        NavigationManager.NavigateTo($"https://localhost:7110/api/storage/{storageId}");
+    }
 }
-
-
-<!--
-    Если через js, то вот код для данных. Дальше уже можно отправить в бд
-
-    document.querySelectorAll(".dtn-div>button").forEach(btn => {
-        btn.addEventListener('click', event => {
-            let item = event.target.ParentElement.ParentElement;
-            let storageId = item.getAttribute("data-item");
-            let storageName = item.querySelector("h3").value;
-            let childsP = item.querySelector("p");
-            let storageDescription = childsP[0].value;
-            let storageTemperature = childsP[1].value;
-            let storageCapacity = childsP[2].value;
-            let storageLongitude = childsP[3].value;
-            let storageLatitude = childsP[4].value;
-        });
-    });
-
--->

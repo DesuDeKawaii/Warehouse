@@ -1,7 +1,157 @@
 ﻿@page "/"
-@layout AppLayout
+@inherits LayoutComponentBase
+@using warehouse_management_core.DTO_s
+@using warehouse_management_application.Storages
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
 
+<PageTitle>Main Page</PageTitle>
 
-@code{
+<!-- Hero Section -->
+<section class="bg-primary text-white text-center py-5">
+    <div class="container">
+        <h1 class="display-4">Welcome to the Warehouse Management System</h1>
+        <p class="lead">Efficiently manage your storage spaces and items!</p>
+        <a href="/Storage" class="btn btn-light btn-lg">View Storages</a>
+    </div>
+</section>
 
+<!-- Storage Overview Section -->
+<section class="container mt-5">
+    <h3 class="text-center mb-4">Storage Overview</h3>
+
+    @if (storages == null)
+    {
+        <div class="text-center">
+            <p class="text-warning">Loading storages...</p>
+        </div>
+    }
+    else if (!storages.Any())
+    {
+        <div class="text-center">
+            <p>No storages found. Click below to create a new one!</p>
+            <button class="btn btn-primary" @onclick="ShowCreateStorageForm">Create New Storage</button>
+        </div>
+    }
+    else
+    {
+        <div class="row">
+            @foreach (var storage in storages)
+            {
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/150" class="card-img-top" alt="Storage Image">
+                        <div class="card-body">
+                            <h5 class="card-title">@storage.Name</h5>
+                            <p class="card-text">@storage.Description</p>
+                            <p><strong>Capacity:</strong> @storage.Capacity</p>
+                            <p><strong>Temperature:</strong> @storage.Temperature</p>
+                            <button class="btn btn-info" @onclick="() => NavigateToStorage(storage.Id.Value)">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+</section>
+
+<!-- Create Storage Form Modal -->
+@if (showCreateForm)
+{
+    <div class="modal fade show" tabindex="-1" style="display:block; background-color: rgba(0,0,0,0.5);" aria-labelledby="createStorageModalLabel" aria-hidden="false">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="createStorageModalLabel">Create New Storage</h5>
+                    <button type="button" class="btn-close" @onclick="() => showCreateForm = false" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <EditForm Model="newStorage" OnValidSubmit="HandleCreateStorage">
+                        <DataAnnotationsValidator />
+                        <ValidationSummary />
+
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Storage Name</label>
+                            <InputText id="name" class="form-control" @bind-Value="newStorage.Name" placeholder="Enter storage name" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="description" class="form-label">Description</label>
+                            <InputText id="description" class="form-control" @bind-Value="newStorage.Description" placeholder="Enter storage description" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="capacity" class="form-label">Capacity</label>
+                            <InputNumber id="capacity" class="form-control" @bind-Value="newStorage.Capacity" placeholder="Enter storage capacity" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="temperature" class="form-label">Temperature</label>
+                            <InputNumber id="temperature" class="form-control" @bind-Value="newStorage.Temperature" placeholder="Enter storage temperature" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="latitude" class="form-label">Latitude</label>
+                            <InputNumber id="latitude" class="form-control" @bind-Value="newStorage.Latitude" placeholder="Enter latitude" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="longitude" class="form-label">Longitude</label>
+                            <InputNumber id="longitude" class="form-control" @bind-Value="newStorage.Longitude" placeholder="Enter longitude" />
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" @onclick="() => showCreateForm = false">Close</button>
+                            <button type="submit" class="btn btn-primary">Create Storage</button>
+                        </div>
+                    </EditForm>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+    private List<StorageDTO> storages;
+    private StorageDTO newStorage = new StorageDTO();
+    private bool showCreateForm = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Fetch the list of storages
+        storages = await Http.GetFromJsonAsync<List<StorageDTO>>("https://localhost:7110/api/storages");
+    }
+
+    private void ShowCreateStorageForm()
+    {
+        // Show the form to create a new storage
+        showCreateForm = true;
+    }
+
+    private async Task HandleCreateStorage()
+    {
+        try
+        {
+            var response = await Http.PostAsJsonAsync("https://localhost:7110/api/storage/create", newStorage);
+
+            if (response.IsSuccessStatusCode)
+            {
+                storages = await Http.GetFromJsonAsync<List<StorageDTO>>("https://localhost:7110/api/storages");
+                showCreateForm = false;
+            }
+            else
+            {
+                Console.WriteLine("Error creating storage.");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error: {ex.Message}");
+        }
+    }
+
+    private void NavigateToStorage(Guid storageId)
+    {
+        NavigationManager.NavigateTo($"/storage/{storageId}");
+    }
 }

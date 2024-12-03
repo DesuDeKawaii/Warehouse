@@ -10,6 +10,6 @@ public class Item : IEntity
     public float Price { get; set; }
 
 
-    public virtual ItemStorage ItemStorage { get; set; }
-    public virtual ItemShop ItemShop { get; set; }
+    public virtual ItemStorage? ItemStorage { get; set; }
+    public virtual ItemShop? ItemShop { get; set; }
 }

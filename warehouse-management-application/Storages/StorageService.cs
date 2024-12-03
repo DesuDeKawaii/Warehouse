@@ -34,31 +34,47 @@ namespace warehouse_management_application.Storages
 
         public async Task CreateOrUpdateStorageAsync(StorageDTO storage, CancellationToken cancellationToken = default)
         {
-            Storage localStorage;
+            Storage localstorage;
+
+            // Если у элемента есть ID, ищем его в базе
             if (storage.Id is not null)
             {
-                localStorage = (await Repository.Get(x => x.Id.Value == storage.Id.Value, cancellationToken)).FirstOrDefault() ??
-                    throw new StorageNotFoundException(storage.Id.Value);
-                localStorage.Name = storage.Name;
-                localStorage.Description = storage.Description;
-                localStorage.Capacity = storage.Capacity;
-                localStorage.Temperature = storage.Temperature;
+                // Ищем элемент по ID
+                localstorage = (await Repository.Get(x => x.Id.Value == storage.Id.Value, cancellationToken)).FirstOrDefault()
+                            ?? throw new ItemNotFoundException(storage.Id.Value);
 
+                // Обновляем свойства
+                localstorage.Name = storage.Name;
+                localstorage.Description = storage.Description;
+                localstorage.Capacity = storage.Capacity;
+                localstorage.Temperature = storage.Temperature;
+                localstorage.Latitude = storage.Latitude;
+                localstorage.Longitude = storage.Longitude;
+                
             }
             else
-                localStorage = new()
+            {
+                // Для нового элемента создаем новый объект
+                localstorage = new Storage
                 {
+                    Id = new Id(Guid.NewGuid()), // Генерация нового ID
                     Name = storage.Name,
                     Description = storage.Description,
                     Capacity = storage.Capacity,
-                    Temperature = storage.Temperature
-                };
+                    Temperature = storage.Temperature,
+                    Latitude = storage.Latitude,
+                    Longitude = storage.Longitude,
 
-            if (localStorage.Id is null)
-                await Repository.Add(localStorage, cancellationToken);
+                };
+            }
+
+            // Добавление нового элемента или обновление существующего
+            if (storage.Id is null)
+                await Repository.Add(localstorage, cancellationToken);  // Для нового элемента
             else
-                await Repository.Update(localStorage, cancellationToken);
+                await Repository.Update(localstorage, cancellationToken);  // Для обновления существующего
         }
+
 
         public async Task GetStorageItems(Guid storageId, Guid itemId, ItemStorage itemStorage, CancellationToken cancellationToken = default)
         {

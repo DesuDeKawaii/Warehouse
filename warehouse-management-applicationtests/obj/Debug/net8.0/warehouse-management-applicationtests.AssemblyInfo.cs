@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("warehouse-management-applicationtests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+630a3b1b195dd1aff17dda840e5f734cf96e2435")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+361767b1261562d121b3ab9ef50925e369419375")]
 [assembly: System.Reflection.AssemblyProductAttribute("warehouse-management-applicationtests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("warehouse-management-applicationtests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

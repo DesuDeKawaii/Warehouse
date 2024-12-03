@@ -1,11 +1,5 @@
-﻿@using warehouse_management_application.Items
-@using warehouse_management_core
-@using warehouse_management_core.DTO_s
-@using warehouse_management_core.Entities
-@using warehouse_management_application
-@using warehouse_management_core.Exceptions
-@using warehouse_management_infrastructure.Db
-@page "/items"
+﻿@page "/items"
+@using warehouse_management_application.Items
 @layout AppLayout
 @inject NavigationManager NavigationManager
 @inject ItemService ItemService
@@ -14,33 +8,155 @@
 <PageTitle>Items</PageTitle>
 
 
-<h3>Items List</h3>
 
-@if (items == null)
-{
-    <p>Loading...</p>
-}
-else if (!items.Any())
-{
-    <p>No items found.</p>
-}
-else
-{
-    <ul>
-        @foreach (var item in items)
-        {
-            <li>@item.Name - @item.Price</li>
-        }
-    </ul>
-}
+<div class="container mt-4">
+    <h3 class="text-center">Items List</h3>
+
+    @if (items == null)
+    {
+        <p class="text-center">Loading...</p>
+    }
+    else if (!items.Any())
+    {
+        <p class="text-center">No items found.</p>
+    }
+    else
+    {
+        <div class="row">
+            @foreach (var item in items)
+            {
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">@item.Name</h5>
+                             <p class="card-text">Price: @item.Price</p>
+                             <p class="card-text">Description: @item.Description</p> 
+                            <p class="card-text">Expiration Date: @item.ExpirationDate.ToString("d")</p>
+
+                            <!-- Delete Button -->
+                            <button class="btn btn-danger" @onclick="() => HandleDeleteItem(item.Id.Value)">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+
+    <!-- Кнопка для создания нового предмета -->
+    <button class="btn btn-primary" @onclick="ShowCreateItemForm">Create New Item</button>
+
+    <!-- Create Item Form -->
+    @if (showCreateForm)
+    {
+        <div class="mt-4">
+            <h3 class="text-center">Create New Item</h3>
+            <EditForm Model="newItem" OnValidSubmit="HandleCreateItem" class="col-md-6 mx-auto">
+                <DataAnnotationsValidator />
+                <ValidationSummary />
+
+                <!-- Name -->
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <InputText id="name" class="form-control" @bind-Value="newItem.Name" />
+                </div>
+
+                <!-- Description -->
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <InputText id="description" class="form-control" @bind-Value="newItem.Description" />
+                </div>
+
+                <!-- Price -->
+                <div class="form-group">
+                    <label for="price">Price</label>
+                    <InputNumber id="price" class="form-control" @bind-Value="newItem.Price" />
+                </div>
+
+                <!-- Expiration Date -->
+                <div class="form-group">
+                    <label for="expirationDate">Expiration Date</label>
+                    <InputDate id="expirationDate" class="form-control" @bind-Value="newItem.ExpirationDate" />
+                </div>
+
+                <!-- Submit Button -->
+                <div class="text-center mt-3">
+                    <button class="btn btn-success" type="submit">Create Item</button>
+                </div>
+            </EditForm>
+        </div>
+    }
+</div>
 
 @code {
     private List<Item> items;
+    private Item newItem = new Item();
+    private bool showCreateForm = false;
 
     protected override async Task OnInitializedAsync()
     {
-        //items = await Http.GetFromJsonAsync<List<Item>>("http://localhost:5262/api/items");
+        // Загрузка существующих items через GET запрос на endpoint "api/items"
+        items = await Http.GetFromJsonAsync<List<Item>>("https://localhost:7110/api/items");
+    }
 
-       items = await Http.GetFromJsonAsync<List<Item>>("https://localhost:7110/api/items");
+    private void ShowCreateItemForm()
+    {
+        // Показать форму для создания нового Item
+        showCreateForm = true;
+    }
+
+    private async Task HandleCreateItem()
+    {
+        try
+        {
+            // Отправка данных нового item через POST запрос на endpoint "api/item/create"
+            var response = await Http.PostAsJsonAsync("https://localhost:7110/api/item/create", newItem);
+
+            if (response.IsSuccessStatusCode)
+            {
+                // Если создание прошло успешно, обновляем список
+                items = await Http.GetFromJsonAsync<List<Item>>("https://localhost:7110/api/items");
+                showCreateForm = false; // Скрыть форму
+            }
+            else
+            {
+                // Выводим ошибку в консоль, если запрос не удался
+                Console.WriteLine("Error creating item.");
+            }
+        }
+        catch (Exception ex)
+        {
+            // Логируем исключение
+            Console.WriteLine($"Error: {ex.Message}");
+        }
+    }
+
+    private async Task HandleDeleteItem(Guid itemId)
+    {
+        try
+        {
+            var response = await Http.DeleteAsync($"https://localhost:7110/api/item/{itemId}");
+
+            if (response.IsSuccessStatusCode)
+            {
+                // Обновляем список после удаления
+                items = await Http.GetFromJsonAsync<List<Item>>("https://localhost:7110/api/items");
+            }
+            else
+            {
+                // Ошибка удаления
+                Console.WriteLine("Error deleting item.");
+            }
+        }
+        catch (Exception ex)
+        {
+            // Логируем исключение
+            Console.WriteLine($"Error: {ex.Message}");
+        }
+    }
+
+    private void NavigateToItemDetails(Guid itemId)
+    {
+        // Переход на страницу с подробностями о предмете
+        NavigationManager.NavigateTo($"/item/{itemId}");
     }
 }

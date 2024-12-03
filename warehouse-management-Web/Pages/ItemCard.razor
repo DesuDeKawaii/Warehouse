@@ -1,54 +1,44 @@
-﻿@page "/ItemCard/{ItemId:guid}"
-@using warehouse_management_application.Items
-@using warehouse_management_core.DTO_s
-@inject ItemService Repository
-<div class="item-detail">
-    @if (ItemsDTO != null)
-    {
-        <div class="item-main">
-            <div class="image-section">
-                <div class="main-image">
-                    <img src="@ItemsDTO.Description" alt="@ItemsDTO.Name" />
-                </div>
-            </div>
+﻿@page "/item/{itemId:guid}"
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
 
-            <div class="item-content">
-                <h1 class="item-title">@ItemsDTO.Name</h1>
-                <p class="item-price">@ItemsDTO.Price руб.</p>
-                <p class="item-description">@ItemsDTO.Description</p>
-            </div>
-        </div>
+<PageTitle>Item Details</PageTitle>
+
+<div class="container mt-4">
+    <h3 class="text-center">Item Details</h3>
+
+    @if (item == null)
+    {
+        <p class="text-center">Loading...</p>
     }
     else
     {
-        <span>Товар не найден</span>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">@item.Name</h5>
+                <p class="card-text">Description: @item.Description</p>
+                <p class="card-text">Price: @item.Price</p>
+                <p class="card-text">Expiration Date: @item.ExpirationDate.ToString("d")</p>
+            </div>
+        </div>
     }
+
+    <div class="text-center mt-4">
+        <button class="btn btn-primary" @onclick="BackToList">Back to Items List</button>
+    </div>
 </div>
 
 @code {
-    [Parameter]
-    public Guid ItemId { get; set; }
-    public CancellationToken cancellationToken = new CancellationToken();
-    private ItemDTO ItemsDTO;
-
+    [Parameter] public Guid itemId { get; set; }
+    private Item item;
 
     protected override async Task OnInitializedAsync()
     {
-        var item = await Repository.GetItemById(ItemId, cancellationToken);
-        if (item != null)
-        {
-            ItemsDTO = new ItemDTO
-                {
-                    Id = item.Id,
-                    Name = item.Name,
-                    Description = item.Description,
-                    ExpirationDate = item.ExpirationDate,
-                    Temperature = item.Temperature,
-                    Price = item.Price
-                };
-        }
+        item = await Http.GetFromJsonAsync<Item>($"https://localhost:7110/api/item/{itemId}");
     }
 
-
-
+    private void BackToList()
+    {
+        NavigationManager.NavigateTo("/items");
+    }
 }

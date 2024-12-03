@@ -10,15 +10,16 @@ using warehouse_management_infrastructure.Db;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Регистрация DbContext
-builder.Services.AddDbContext<WarehouseContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ DbContext
+//builder.Services.AddDbContext<WarehouseContext>(options =>
+//    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddDbContext<FakeContext>();
 
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowBlazor",
-        policy => policy.WithOrigins("http://localhost:7113")  // Порт Blazor
+        policy => policy//.WithOrigins("http://localhost:7113")  // пїЅпїЅпїЅпїЅ Blazor
+                        .SetIsOriginAllowed(x=> true)  
                         .AllowAnyMethod()
                         .AllowAnyHeader());
 });
@@ -28,43 +29,44 @@ builder.Services.AddCors(options =>
 
 
 
-// Регистрация репозиториев как Scoped
-builder.Services.AddScoped<IRepository<Item>, BasicRepository<Item>>();
-builder.Services.AddScoped<IRepository<Storage>, BasicRepository<Storage>>();
-builder.Services.AddScoped<IRepository<Shop>, BasicRepository<Shop>>();
+//// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ Scoped
+//builder.Services.AddScoped<IRepository<Item>, FakeRepository<Item>>();
+//builder.Services.AddScoped<IRepository<Storage>, FakeRepository<Storage>>();
+//builder.Services.AddScoped<IRepository<Shop>, FakeRepository<Shop>>();
 
-// Динамическая регистрация репозиториев для всех сущностей как Scoped
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ Scoped
 var entityTypes = typeof(IEntity).Assembly
                                     .GetTypes()
                                     .Where(x => !x.IsInterface &&
                                                 !x.IsAbstract &&
                                                 typeof(IEntity).IsAssignableFrom(x));
+
 foreach (var entityType in entityTypes)
 {
     builder.Services
         .AddScoped(typeof(IRepository<>).MakeGenericType(entityType),
-                   typeof(BasicRepository<>).MakeGenericType(entityType));
+                   typeof(FakeRepository<>).MakeGenericType(entityType));
 }
 
-// Регистрация сервисов как Scoped
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ Scoped
 builder.Services.AddScoped<ItemService>();
 builder.Services.AddScoped<StorageService>();
 builder.Services.AddScoped<ShopService>();
 
-// Регистрация логгеров
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 builder.Services.AddScoped<ILogger<ShopService>, Logger<ShopService>>();
 builder.Services.AddScoped<ILogger<StorageService>, Logger<StorageService>>();
 builder.Services.AddScoped<ILogger<ItemService>, Logger<ItemService>>();
 
-// Добавление Swagger
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ Swagger
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-app.UseCors("AllowBlazor"); // Применение политики CORS
+app.UseCors("AllowBlazor"); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ CORS
 
-// Конфигурация HTTP-пайплайна
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ HTTP-пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -73,7 +75,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-// Добавление маршрутов для эндпоинтов
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 app.MapItemEndpoints();
 app.MapStorageEndpoints();
 app.MapShopEndpoints();

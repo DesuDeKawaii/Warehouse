@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Дмитрий\\Downloads\\Warehouse\\Warehouse\\warehouse-management-application\\warehouse-management-application.csproj": {}
+    "C:\\Users\\Дмитрий\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-application\\warehouse-management-application.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Дмитрий\\Downloads\\Warehouse\\Warehouse\\warehouse-management-application\\warehouse-management-application.csproj": {
+    "C:\\Users\\Дмитрий\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-application\\warehouse-management-application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Дмитрий\\Downloads\\Warehouse\\Warehouse\\warehouse-management-application\\warehouse-management-application.csproj",
+        "projectUniqueName": "C:\\Users\\Дмитрий\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-application\\warehouse-management-application.csproj",
         "projectName": "warehouse-management-application",
-        "projectPath": "C:\\Users\\Дмитрий\\Downloads\\Warehouse\\Warehouse\\warehouse-management-application\\warehouse-management-application.csproj",
+        "projectPath": "C:\\Users\\Дмитрий\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-application\\warehouse-management-application.csproj",
         "packagesPath": "C:\\Users\\Дмитрий\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Дмитрий\\Downloads\\Warehouse\\Warehouse\\warehouse-management-application\\obj\\",
+        "outputPath": "C:\\Users\\Дмитрий\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\vs other\\NuGetPackages"
@@ -33,8 +33,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Дмитрий\\Downloads\\Warehouse\\Warehouse\\warehouse-management-core\\warehouse-management-core.csproj": {
-                "projectPath": "C:\\Users\\Дмитрий\\Downloads\\Warehouse\\Warehouse\\warehouse-management-core\\warehouse-management-core.csproj"
+              "C:\\Users\\Дмитрий\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-core\\warehouse-management-core.csproj": {
+                "projectPath": "C:\\Users\\Дмитрий\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-core\\warehouse-management-core.csproj"
               }
             }
           }
@@ -73,14 +73,14 @@
         }
       }
     },
-    "C:\\Users\\Дмитрий\\Downloads\\Warehouse\\Warehouse\\warehouse-management-core\\warehouse-management-core.csproj": {
+    "C:\\Users\\Дмитрий\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-core\\warehouse-management-core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Дмитрий\\Downloads\\Warehouse\\Warehouse\\warehouse-management-core\\warehouse-management-core.csproj",
+        "projectUniqueName": "C:\\Users\\Дмитрий\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-core\\warehouse-management-core.csproj",
         "projectName": "warehouse-management-core",
-        "projectPath": "C:\\Users\\Дмитрий\\Downloads\\Warehouse\\Warehouse\\warehouse-management-core\\warehouse-management-core.csproj",
+        "projectPath": "C:\\Users\\Дмитрий\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-core\\warehouse-management-core.csproj",
         "packagesPath": "C:\\Users\\Дмитрий\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Дмитрий\\Downloads\\Warehouse\\Warehouse\\warehouse-management-core\\obj\\",
+        "outputPath": "C:\\Users\\Дмитрий\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\vs other\\NuGetPackages"

@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Дмитрий\\Downloads\\Warehouse\\Warehouse\\warehouse-management-core\\warehouse-management-core.csproj",
+      "projectUniqueName": "C:\\Users\\Дмитрий\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-core\\warehouse-management-core.csproj",
       "projectName": "warehouse-management-core",
-      "projectPath": "C:\\Users\\Дмитрий\\Downloads\\Warehouse\\Warehouse\\warehouse-management-core\\warehouse-management-core.csproj",
+      "projectPath": "C:\\Users\\Дмитрий\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-core\\warehouse-management-core.csproj",
       "packagesPath": "C:\\Users\\Дмитрий\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Дмитрий\\Downloads\\Warehouse\\Warehouse\\warehouse-management-core\\obj\\",
+      "outputPath": "C:\\Users\\Дмитрий\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\vs other\\NuGetPackages"

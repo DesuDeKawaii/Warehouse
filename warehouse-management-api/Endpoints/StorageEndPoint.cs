@@ -15,9 +15,39 @@ public static class StorageEndPoint
     public static void MapStorageEndpoints(this IEndpointRouteBuilder routes)
     {
         routes.MapPost("api/storage/create", CreateStorage).WithTags("Storage");
-        routes.MapGet("api/storages", GetStorage).WithTags("Storage");
+        routes.MapGet("api/storages", GetStorages).WithTags("Storage");
+        routes.MapGet("api/storage/{storageId}", GetStorage).WithTags("Storage");
         routes.MapGet("api/storage/item/{itemId}", GetItemById).WithTags("Item");
         routes.MapDelete("api/storage/{storageId}", DeleteStorage).WithTags("Storage");
+        routes.MapPost("api/storage/{storageId}", AddItemsToStorage).WithTags("Storage");
+    }
+
+    private static async Task<IResult> AddItemsToStorage(Guid storageId, [FromBody] ItemStorage itemStorage, [FromServices] StorageService service, [FromServices] ILogger<StorageService> logger, CancellationToken cancellationToken)
+    {
+        try
+        {
+            await service.BuyItems(storageId, itemStorage, cancellationToken);
+            return Results.Ok(); // Успешное добавление элементов
+        }
+        catch (Exception ex)
+        {
+            logger.LogError(ex, "An error occurred while adding items to storage.");
+            return Results.StatusCode(StatusCodes.Status500InternalServerError);
+        }
+    }
+
+        private static async Task<IResult> GetStorages([FromServices] StorageService service, [FromServices] ILogger<StorageService> logger, CancellationToken cancellationToken)
+    {
+        try
+        {
+            var storages = await service.GetStoragesAsync(cancellationToken); // Получаем список всех складов
+            return Results.Ok(storages); // Возвращаем статус 200 и список складов
+        }
+        catch (Exception ex)
+        {
+            logger.LogError(ex, "An error occurred while retrieving storages.");
+            return Results.StatusCode(StatusCodes.Status500InternalServerError);
+        }
     }
 
     private static async Task<IResult> GetItemById(Guid itemId, [FromServices] StorageService service, [FromServices] ILogger<StorageService> logger, CancellationToken cancellationToken)
@@ -39,7 +69,7 @@ public static class StorageEndPoint
         }
     }
 
-    public static async Task<IResult> CreateStorage(StorageDTO storage, [FromServices] StorageService service, [FromServices] ILogger<StorageService> logger)
+    public static async Task<IResult> CreateStorage(Storage storage, [FromServices] StorageService service, [FromServices] ILogger<StorageService> logger)
     {
         try
         {
@@ -63,7 +93,7 @@ public static class StorageEndPoint
         try
         {
             await service.GetStorageById(storageId, cancellationToken);
-            return Results.Ok();
+            return Results.Ok(storageId);
         }
         catch (ItemNotFoundException ex)
         {
