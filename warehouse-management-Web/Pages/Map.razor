@@ -1,11 +1,40 @@
 ﻿@page "/map"
 @layout AppLayout
 
-@inject NavigationManager nav;
 <PageTitle>Map</PageTitle>
 
-<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A7ee8ce0dd2359b339a4e6664aa1263534ee785e4d0779ae021a7ed22346ee3b5&amp;source=constructor" frameborder="0" style="border-radius:10px;height:80vh;width:90vw;"></iframe>
+@inject IJSRuntime JS
+@inject HttpClient Http
+
+<!-- Встраиваемая карта -->
+<iframe id="map"
+        src="https://yandex.ru/map-widget/v1/?um=constructor%3A7ee8ce0dd2359b339a4e6664aa1263534ee785e4d0779ae021a7ed22346ee3b5&amp;source=constructor"
+        frameborder="0" style="border-radius:10px;height:80vh;width:100%;"></iframe>
+
+<!-- Кнопка для добавления местоположений -->
+<button class="btn btn-primary add-location-btn" @onclick="AddStorageLocations">Добавить местоположения</button>
 
 @code {
-   
+    private List<StorageDTO> storages = new List<StorageDTO>();
+
+    // Метод для добавления местоположений на карту
+    private async Task AddStorageLocations()
+    {
+        // Получаем данные всех складов с API
+        storages = await Http.GetFromJsonAsync<List<StorageDTO>>("api/storages");
+
+        // Добавляем маркеры для каждого склада
+        foreach (var storage in storages)
+        {
+            await JS.InvokeVoidAsync("addMarker", storage.Latitude, storage.Longitude, storage.Name);
+        }
+    }
+
+    // Класс для данных о складах
+    public class StorageDTO
+    {
+        public string Name { get; set; }
+        public double Latitude { get; set; }
+        public double Longitude { get; set; }
+    }
 }

@@ -1,7 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
     "C:\\Users\\Дмитрий\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-application\\warehouse-management-application.csproj": {}
   },
   "projects": {
@@ -13,25 +12,12 @@
         "projectPath": "C:\\Users\\Дмитрий\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-application\\warehouse-management-application.csproj",
         "packagesPath": "C:\\Users\\Дмитрий\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Дмитрий\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-application\\obj\\",
-=======
-    "C:\\Users\\chris\\OneDrive\\Desktop\\113\\Warehouse\\warehouse-management-application\\warehouse-management-application.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\chris\\OneDrive\\Desktop\\113\\Warehouse\\warehouse-management-application\\warehouse-management-application.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\chris\\OneDrive\\Desktop\\113\\Warehouse\\warehouse-management-application\\warehouse-management-application.csproj",
-        "projectName": "warehouse-management-application",
-        "projectPath": "C:\\Users\\chris\\OneDrive\\Desktop\\113\\Warehouse\\warehouse-management-application\\warehouse-management-application.csproj",
-        "packagesPath": "C:\\Users\\chris\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\chris\\OneDrive\\Desktop\\113\\Warehouse\\warehouse-management-application\\obj\\",
->>>>>>> f99ca7b95a3584078304028f6c818624c741ca80
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "D:\\vs other\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\chris\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Дмитрий\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -47,13 +33,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-<<<<<<< HEAD
               "C:\\Users\\Дмитрий\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-core\\warehouse-management-core.csproj": {
                 "projectPath": "C:\\Users\\Дмитрий\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-core\\warehouse-management-core.csproj"
-=======
-              "C:\\Users\\chris\\OneDrive\\Desktop\\113\\Warehouse\\warehouse-management-core\\warehouse-management-core.csproj": {
-                "projectPath": "C:\\Users\\chris\\OneDrive\\Desktop\\113\\Warehouse\\warehouse-management-core\\warehouse-management-core.csproj"
->>>>>>> f99ca7b95a3584078304028f6c818624c741ca80
               }
             }
           }
@@ -83,30 +64,15 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[7.0.20, 7.0.20]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[7.0.20, 7.0.20]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[7.0.20, 7.0.20]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.307\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     },
-<<<<<<< HEAD
     "C:\\Users\\Дмитрий\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-core\\warehouse-management-core.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -115,22 +81,12 @@
         "projectPath": "C:\\Users\\Дмитрий\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-core\\warehouse-management-core.csproj",
         "packagesPath": "C:\\Users\\Дмитрий\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Дмитрий\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-core\\obj\\",
-=======
-    "C:\\Users\\chris\\OneDrive\\Desktop\\113\\Warehouse\\warehouse-management-core\\warehouse-management-core.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\chris\\OneDrive\\Desktop\\113\\Warehouse\\warehouse-management-core\\warehouse-management-core.csproj",
-        "projectName": "warehouse-management-core",
-        "projectPath": "C:\\Users\\chris\\OneDrive\\Desktop\\113\\Warehouse\\warehouse-management-core\\warehouse-management-core.csproj",
-        "packagesPath": "C:\\Users\\chris\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\chris\\OneDrive\\Desktop\\113\\Warehouse\\warehouse-management-core\\obj\\",
->>>>>>> f99ca7b95a3584078304028f6c818624c741ca80
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "D:\\vs other\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\chris\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Дмитрий\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -173,26 +129,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[7.0.20, 7.0.20]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[7.0.20, 7.0.20]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[7.0.20, 7.0.20]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.307\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

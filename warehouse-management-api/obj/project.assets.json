@@ -5473,23 +5473,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\chris\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Дмитрий\\.nuget\\packages\\": {},
+    "D:\\vs other\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\chris\\OneDrive\\Desktop\\113\\Warehouse\\warehouse-management-api\\warehouse-management-api.csproj",
+      "projectUniqueName": "C:\\Users\\Дмитрий\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-api\\warehouse-management-api.csproj",
       "projectName": "warehouse-management-api",
-      "projectPath": "C:\\Users\\chris\\OneDrive\\Desktop\\113\\Warehouse\\warehouse-management-api\\warehouse-management-api.csproj",
-      "packagesPath": "C:\\Users\\chris\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\chris\\OneDrive\\Desktop\\113\\Warehouse\\warehouse-management-api\\obj\\",
+      "projectPath": "C:\\Users\\Дмитрий\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-api\\warehouse-management-api.csproj",
+      "packagesPath": "C:\\Users\\Дмитрий\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Дмитрий\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "D:\\vs other\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\chris\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Дмитрий\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -5505,14 +5505,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\chris\\OneDrive\\Desktop\\113\\Warehouse\\warehouse-management-application\\warehouse-management-application.csproj": {
-              "projectPath": "C:\\Users\\chris\\OneDrive\\Desktop\\113\\Warehouse\\warehouse-management-application\\warehouse-management-application.csproj"
+            "C:\\Users\\Дмитрий\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-application\\warehouse-management-application.csproj": {
+              "projectPath": "C:\\Users\\Дмитрий\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-application\\warehouse-management-application.csproj"
             },
-            "C:\\Users\\chris\\OneDrive\\Desktop\\113\\Warehouse\\warehouse-management-core\\warehouse-management-core.csproj": {
-              "projectPath": "C:\\Users\\chris\\OneDrive\\Desktop\\113\\Warehouse\\warehouse-management-core\\warehouse-management-core.csproj"
+            "C:\\Users\\Дмитрий\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-core\\warehouse-management-core.csproj": {
+              "projectPath": "C:\\Users\\Дмитрий\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-core\\warehouse-management-core.csproj"
             },
-            "C:\\Users\\chris\\OneDrive\\Desktop\\113\\Warehouse\\warehouse-management-infrastructure\\warehouse-management-infrastructure.csproj": {
-              "projectPath": "C:\\Users\\chris\\OneDrive\\Desktop\\113\\Warehouse\\warehouse-management-infrastructure\\warehouse-management-infrastructure.csproj"
+            "C:\\Users\\Дмитрий\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-infrastructure\\warehouse-management-infrastructure.csproj": {
+              "projectPath": "C:\\Users\\Дмитрий\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-infrastructure\\warehouse-management-infrastructure.csproj"
             }
           }
         }
@@ -5576,7 +5576,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.307/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

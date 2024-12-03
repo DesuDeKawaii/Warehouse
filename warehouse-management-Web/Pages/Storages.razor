@@ -8,8 +8,15 @@
 
 <PageTitle>Storages</PageTitle>
 
-<div class="container mt-4">
-    <h3 class="text-center">Storages List</h3>
+<div class="container mt-4" id="products">
+    <h3 class="text-center mb-4">Storages List</h3>
+
+    <!-- Кнопка для создания нового склада -->
+    <div class="text-center mt-4">
+        <button class="btn btn-primary btn-lg" @onclick="ShowCreateStorageForm">
+            <i class="fas fa-plus-circle"></i> Create New Storage
+        </button>
+    </div>
 
     @if (storages == null)
     {
@@ -21,96 +28,114 @@
     }
     else
     {
-        <div class="row">
+        <div class="row mt-4">
+            <!-- Create Storage Form Modal -->
+            @if (showCreateForm)
+            {
+                <div class="col-md-12 mb-4">
+                    <div class="card shadow-lg rounded">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Enter Storage Details</h5>
+                            <EditForm Model="newStorage" OnValidSubmit="HandleCreateStorage">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+
+                                <div class="form-group d-flex align-items-center">
+                                    <label for="name" class="form-label w-25">Storage Name</label>
+                                    <InputText id="name" class="form-control w-75" @bind-Value="newStorage.Name" placeholder="Enter storage name" />
+                                </div>
+
+                                <div class="form-group d-flex align-items-center">
+                                    <label for="description" class="form-label w-25">Description</label>
+                                    <InputText id="description" class="form-control w-75" @bind-Value="newStorage.Description" placeholder="Enter storage description" />
+                                </div>
+
+                                <h6 class="mt-4">Capacity and Temperature</h6>
+                                <div class="form-group d-flex align-items-center">
+                                    <label for="capacity" class="form-label w-25">Capacity (in cubic meters)</label>
+                                    <InputNumber id="capacity" class="form-control w-75" @bind-Value="newStorage.Capacity" placeholder="Enter storage capacity" min="0" />
+                                </div>
+
+                                <div class="form-group d-flex align-items-center">
+                                    <label for="temperature" class="form-label w-25">Temperature (°C)</label>
+                                    <InputNumber id="temperature" class="form-control w-75" @bind-Value="newStorage.Temperature" placeholder="Enter temperature" />
+                                </div>
+
+                                <h6 class="mt-4">Geolocation</h6>
+                                <div class="form-group d-flex align-items-center">
+                                    <label for="latitude" class="form-label w-25">Latitude</label>
+                                    <InputNumber id="latitude" class="form-control w-75" @bind-Value="newStorage.Latitude" placeholder="Enter latitude" />
+                                </div>
+
+                                <div class="form-group d-flex align-items-center">
+                                    <label for="longitude" class="form-label w-25">Longitude</label>
+                                    <InputNumber id="longitude" class="form-control w-75" @bind-Value="newStorage.Longitude" placeholder="Enter longitude" />
+                                </div>
+
+                                <div class="text-center mb-3">
+                                    <button class="btn btn-success btn-lg" type="submit">
+                                        <i class="fas fa-check-circle"></i> Create Storage
+                                    </button>
+                                </div>
+                            </EditForm>
+                        </div>
+                    </div>
+                </div>
+            }
+
+            <!-- Displaying the storages -->
             @foreach (var storage in storages)
             {
-                <div class="col-md-4 mb-3">
-                    <div class="card">
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-lg rounded">
+                        <img src="*" alt="Storage Image" class="card-img-top rounded">
                         <div class="card-body">
                             <h5 class="card-title">@storage.Name</h5>
                             <p class="card-text">@storage.Description</p>
-                            <ul>
-                                <li><strong>Capacity:</strong> @storage.Capacity</li>
-                                <li><strong>Latitude:</strong> @storage.Latitude</li>
-                                <li><strong>Longitude:</strong> @storage.Longitude</li>
-                                <li><strong>Temperature:</strong> @storage.Temperature</li>
-                            </ul>
-                            <!-- Кнопка для перехода на детали склада -->
-                            @* <button class="btn btn-info" @onclick="() => NavigateToStorage(storage.Id.Value)">View Details</button> *@
-                            <button class="btn btn-danger" @onclick="() => HandleDeleteStorage(storage.Id.Value)">Delete</button>
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <i class="fas fa-thermometer-half"></i> <span>@storage.Temperature &deg;C</span>
+                                </div>
+                                <div>
+                                    <i class="fas fa-cogs"></i> <span>@storage.Capacity м³</span>
+                                </div>
+                            </div>
+                            <div class="mt-2 d-flex justify-content-between">
+                                <div>
+                                    <i class="fas fa-map-marker-alt"></i> <span>@storage.Latitude° Lat, @storage.Longitude° Lng</span>
+                                </div>
+                                <button class="btn btn-danger btn-sm" @onclick="() => HandleDeleteStorage(storage.Id.Value)">
+                                    <i class="fas fa-trash-alt"></i> Delete
+                                </button>
+                            </div>
+                            <div class="text-center mt-3">
+                                <button class="btn btn-info btn-sm" @onclick="() => NavigateToStorage(storage.Id.Value)">
+                                    <i class="fas fa-eye"></i> View Details
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
             }
         </div>
     }
-
-    <!-- Кнопка для создания нового склада -->
-    <div class="text-center mt-4">
-        <button class="btn btn-primary" @onclick="ShowCreateStorageForm">Create New Storage</button>
-    </div>
-
-    <!-- Create Storage Form -->
-    @if (showCreateForm)
-    {
-        <div class="mt-4">
-            <h3 class="text-center">Create New Storage</h3>
-            <EditForm Model="newStorage" OnValidSubmit="HandleCreateStorage" class="col-md-8 mx-auto">
-                <DataAnnotationsValidator />
-                <ValidationSummary />
-                <!-- Форма для создания склада -->
-                <div class="row">
-                    <div class="col-md-6 mb-3">
-                        <label for="name">Name</label>
-                        <InputText id="name" class="form-control" @bind-Value="newStorage.Name" placeholder="Enter storage name" />
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <label for="description">Description</label>
-                        <InputText id="description" class="form-control" @bind-Value="newStorage.Description" placeholder="Enter storage description" />
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <label for="capacity">Capacity</label>
-                        <InputNumber id="capacity" class="form-control" @bind-Value="newStorage.Capacity" placeholder="Enter storage capacity" />
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <label for="temperature">Temperature</label>
-                        <InputNumber id="temperature" class="form-control" @bind-Value="newStorage.Temperature" placeholder="Enter temperature" />
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <label for="latitude">Latitude</label>
-                        <InputNumber id="latitude" class="form-control" @bind-Value="newStorage.Latitude" placeholder="Enter latitude" />
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <label for="longitude">Longitude</label>
-                        <InputNumber id="longitude" class="form-control" @bind-Value="newStorage.Longitude" placeholder="Enter longitude" />
-                    </div>
-                </div>
-                <div class="text-center mt-3">
-                    <button class="btn btn-success" type="submit">Create Storage</button>
-                </div>
-            </EditForm>
-        </div>
-    }
 </div>
 
 @code {
-    [Parameter] public Guid storageId { get; set; }
     private List<StorageDTO> storages;
     private StorageDTO newStorage = new StorageDTO();
     private bool showCreateForm = false;
-    private List<ItemStorage> itemStorage;
 
     protected override async Task OnInitializedAsync()
     {
         // Загрузка списка всех складов
         storages = await Http.GetFromJsonAsync<List<StorageDTO>>("https://localhost:7110/api/storages");
-        
     }
 
     private void ShowCreateStorageForm()
     {
         // Показать форму для создания нового склада
-        showCreateForm = true;
+        showCreateForm = !showCreateForm;
     }
 
     private async Task HandleCreateStorage()

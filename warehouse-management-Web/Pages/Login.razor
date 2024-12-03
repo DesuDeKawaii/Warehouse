@@ -1,26 +1,58 @@
 ﻿@page "/login"
 @layout AppLayout
-@inject NavigationManager nav;
+@inject NavigationManager nav
 
-<section>
-    <legend>Welcome!</legend>
-    <div>
-      <label class="form-label mt-4">Login</label>
-      <input class="form-control" placeholder="Enter login">
-      <small id="Help" class="form-text text-muted">How's it going? Huh...</small>
+<PageTitle>Login</PageTitle>
+
+<div class="container d-flex justify-content-center align-items-center" style="height: 100vh;">
+    <div class="card shadow-lg p-4" style="max-width: 400px; width: 100%; border-radius: 15px;">
+        <h2 class="text-center mb-4">Welcome Back!</h2>
+
+        <EditForm Model="loginModel" OnValidSubmit="HandleLogin">
+            <DataAnnotationsValidator />
+            <ValidationSummary class="text-danger" />
+
+            <div class="form-group mb-3">
+                <label for="login" class="form-label">Login</label>
+                <InputText id="login" class="form-control" @bind-Value="loginModel.Login" placeholder="Enter your login" />
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="password" class="form-label">Password</label>
+                <InputText id="password" type="password" class="form-control" @bind-Value="loginModel.Password" placeholder="Enter your password" />
+            </div>
+
+            <div class="d-flex justify-content-between">
+                <button type="submit" class="btn btn-primary w-100">Login</button>
+            </div>
+
+            <div class="mt-3 text-center">
+                <a href="#" class="text-muted" @onclick="NavigateToRegister">Don't have an account? Register</a>
+            </div>
+        </EditForm>
     </div>
-    <div>
-      <label for="Password" class="form-label mt-4">Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" autocomplete="off">
-    </div>
-    <button type="submit" class="btn btn-primary mt-4" @onclick="LoginClick">Login</button>
-</section>
+</div>
 
-@code{
-    private void NavigateToHome() => nav.NavigateTo("/Home");
+@code {
+    private LoginModel loginModel = new LoginModel();
 
-    private void LoginClick()
+    private void HandleLogin()
     {
-        // auth
+        // Логика авторизации, например, через API
+        // Здесь можно выполнить проверки и аутентификацию
+        Console.WriteLine($"Login: {loginModel.Login}, Password: {loginModel.Password}");
+        // Перенаправление на домашнюю страницу после успешного логина
+        nav.NavigateTo("/Home");
+    }
+
+    private void NavigateToRegister()
+    {
+        //nav.NavigateTo("/register");
+    }
+
+    public class LoginModel
+    {
+        public string Login { get; set; }
+        public string Password { get; set; }
     }
 }

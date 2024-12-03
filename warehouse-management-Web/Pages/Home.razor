@@ -8,45 +8,49 @@
 <PageTitle>Main Page</PageTitle>
 
 <!-- Hero Section -->
-<section class="bg-primary text-white text-center py-5">
+<section class="bg-primary text-white text-center py-5" style="background: linear-gradient(135deg, #0066cc, #0044aa);">
     <div class="container">
-        <h1 class="display-4">Welcome to the Warehouse Management System</h1>
-        <p class="lead">Efficiently manage your storage spaces and items!</p>
-        <a href="/Storage" class="btn btn-light btn-lg">View Storages</a>
+        <h1 class="display-4 fw-bold mb-3">Welcome to the Warehouse Management System</h1>
+        <p class="lead mb-4">Efficiently manage your storage spaces and items with ease!</p>
+        <a href="/Storage" class="btn btn-light btn-lg rounded-pill shadow-lg">View Storages</a>
     </div>
 </section>
 
 <!-- Storage Overview Section -->
 <section class="container mt-5">
-    <h3 class="text-center mb-4">Storage Overview</h3>
+    <h3 class="text-center mb-4 fw-bold">Storage Overview</h3>
 
     @if (storages == null)
     {
         <div class="text-center">
-            <p class="text-warning">Loading storages...</p>
+            <p class="text-warning fs-4">Loading storages...</p>
         </div>
     }
     else if (!storages.Any())
     {
         <div class="text-center">
-            <p>No storages found. Click below to create a new one!</p>
-            <button class="btn btn-primary" @onclick="ShowCreateStorageForm">Create New Storage</button>
+            <p class="fs-5">No storages found. Click below to create a new one!</p>
+            <button class="btn btn-primary btn-lg shadow-lg" @onclick="ShowCreateStorageForm">
+                <i class="bi bi-plus-circle me-2"></i>Create New Storage
+            </button>
         </div>
     }
     else
     {
-        <div class="row">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
             @foreach (var storage in storages)
             {
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="https://via.placeholder.com/150" class="card-img-top" alt="Storage Image">
+                <div class="col">
+                    <div class="card shadow-lg border-0 rounded-3">
+                        <img src="https://via.placeholder.com/150" class="card-img-top rounded-3" alt="Storage Image">
                         <div class="card-body">
-                            <h5 class="card-title">@storage.Name</h5>
+                            <h5 class="card-title fw-bold text-primary">@storage.Name</h5>
                             <p class="card-text">@storage.Description</p>
                             <p><strong>Capacity:</strong> @storage.Capacity</p>
                             <p><strong>Temperature:</strong> @storage.Temperature</p>
-                            <button class="btn btn-info" @onclick="() => NavigateToStorage(storage.Id.Value)">View Details</button>
+                            <button class="btn btn-info rounded-pill shadow-sm" @onclick="() => NavigateToStorage(storage.Id.Value)">
+                                View Details
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -59,8 +63,8 @@
 @if (showCreateForm)
 {
     <div class="modal fade show" tabindex="-1" style="display:block; background-color: rgba(0,0,0,0.5);" aria-labelledby="createStorageModalLabel" aria-hidden="false">
-        <div class="modal-dialog">
-            <div class="modal-content">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content shadow-lg rounded-3">
                 <div class="modal-header">
                     <h5 class="modal-title" id="createStorageModalLabel">Create New Storage</h5>
                     <button type="button" class="btn-close" @onclick="() => showCreateForm = false" aria-label="Close"></button>

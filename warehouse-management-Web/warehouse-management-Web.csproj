@@ -25,4 +25,8 @@
     <Folder Include="Components\Shared\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\js\map.js" />
+  </ItemGroup>
+
 </Project>

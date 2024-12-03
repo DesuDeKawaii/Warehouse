@@ -7,82 +7,93 @@
 
 <PageTitle>Items</PageTitle>
 
-
-
-<div class="container mt-4">
-    <h3 class="text-center">Items List</h3>
+<div class="container mt-4" id="products">
+    <h3 class="text-center mb-4 fw-bold">Items List</h3>
 
     @if (items == null)
     {
-        <p class="text-center">Loading...</p>
+        <p class="text-center fs-4 text-warning">Loading...</p>
     }
     else if (!items.Any())
     {
-        <p class="text-center">No items found.</p>
+        <p class="text-center fs-5">No items found.</p>
     }
     else
     {
-        <div class="row">
+        <!-- Create Item Button -->
+        <div class="text-center mt-4 mb-4">
+            <button class="btn btn-primary btn-lg rounded-pill shadow-lg" @onclick="ShowCreateItemForm">
+                <i class="bi bi-plus-circle me-2"></i>Create New Item
+            </button>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <!-- Create Item Form -->
+            @if (showCreateForm)
+            {
+                <div class="col-md-6 mx-auto mb-4">
+                    <div class="card p-3 shadow-lg rounded-3">
+                        <h5 class="text-center fw-bold">Add New Item</h5>
+                        <EditForm Model="newItem" OnValidSubmit="HandleCreateItem">
+                            <DataAnnotationsValidator />
+                            <ValidationSummary />
+
+                            <div class="form-group d-flex align-items-center mb-3">
+                                <label for="name" class="form-label w-25">Item Name</label>
+                                <InputText id="name" class="form-control w-75" @bind-Value="newItem.Name" placeholder="Enter item name" />
+                            </div>
+
+                            <div class="form-group d-flex align-items-center mb-3">
+                                <label for="description" class="form-label w-25">Item Description</label>
+                                <InputText id="description" class="form-control w-75" @bind-Value="newItem.Description" placeholder="Enter item description" />
+                            </div>
+
+                            <div class="form-group d-flex align-items-center mb-3">
+                                <label for="price" class="form-label w-25">Price</label>
+                                <InputNumber id="price" class="form-control w-75" @bind-Value="newItem.Price" placeholder="Enter item price" />
+                            </div>
+
+                            <div class="form-group d-flex align-items-center mb-3">
+                                <label for="expirationDate" class="form-label w-25">Expiration Date</label>
+                                <InputDate id="expirationDate" class="form-control w-75" @bind-Value="newItem.ExpirationDate" />
+                            </div>
+
+                            <div class="text-center">
+                                <button class="btn btn-success btn-lg" type="submit">
+                                    <i class="bi bi-check-circle me-2"></i>Create Item
+                                </button>
+                            </div>
+                        </EditForm>
+
+                    </div>
+                </div>
+            }
+
+            <!-- Item Cards -->
             @foreach (var item in items)
             {
-                <div class="col-md-4 mb-3">
-                    <div class="card">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="card shadow-lg rounded-3 mb-4">
+                        <img src="*" class="card-img-top" alt="Item Image" />
                         <div class="card-body">
-                            <h5 class="card-title">@item.Name</h5>
-                             <p class="card-text">Price: @item.Price</p>
-                             <p class="card-text">Description: @item.Description</p> 
-                            <p class="card-text">Expiration Date: @item.ExpirationDate.ToString("d")</p>
-
-                            <!-- Delete Button -->
-                            <button class="btn btn-danger" @onclick="() => HandleDeleteItem(item.Id.Value)">Delete</button>
+                            <h5 class="card-title fw-bold text-primary">@item.Name</h5>
+                            <p class="card-text">@item.Description</p>
+                            <div class="d-flex justify-content-between mb-3">
+                                <p class="text-muted">Expiration: @item.ExpirationDate.ToString("d")</p>
+                                <p class="text-muted">Price: $@item.Price</p>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <button class="btn btn-danger rounded-pill shadow-sm" @onclick="() => HandleDeleteItem(item.Id.Value)">
+                                    <i class="bi bi-trash me-2"></i>Delete
+                                </button>
+                                <button class="btn btn-info rounded-pill shadow-sm" @onclick="() => NavigateToItemDetails(item.Id.Value)">
+                                    <i class="bi bi-eye me-2"></i>View Details
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
             }
-        </div>
-    }
-
-    <!-- Кнопка для создания нового предмета -->
-    <button class="btn btn-primary" @onclick="ShowCreateItemForm">Create New Item</button>
-
-    <!-- Create Item Form -->
-    @if (showCreateForm)
-    {
-        <div class="mt-4">
-            <h3 class="text-center">Create New Item</h3>
-            <EditForm Model="newItem" OnValidSubmit="HandleCreateItem" class="col-md-6 mx-auto">
-                <DataAnnotationsValidator />
-                <ValidationSummary />
-
-                <!-- Name -->
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <InputText id="name" class="form-control" @bind-Value="newItem.Name" />
-                </div>
-
-                <!-- Description -->
-                <div class="form-group">
-                    <label for="description">Description</label>
-                    <InputText id="description" class="form-control" @bind-Value="newItem.Description" />
-                </div>
-
-                <!-- Price -->
-                <div class="form-group">
-                    <label for="price">Price</label>
-                    <InputNumber id="price" class="form-control" @bind-Value="newItem.Price" />
-                </div>
-
-                <!-- Expiration Date -->
-                <div class="form-group">
-                    <label for="expirationDate">Expiration Date</label>
-                    <InputDate id="expirationDate" class="form-control" @bind-Value="newItem.ExpirationDate" />
-                </div>
-
-                <!-- Submit Button -->
-                <div class="text-center mt-3">
-                    <button class="btn btn-success" type="submit">Create Item</button>
-                </div>
-            </EditForm>
         </div>
     }
 </div>
@@ -94,38 +105,35 @@
 
     protected override async Task OnInitializedAsync()
     {
-        // Загрузка существующих items через GET запрос на endpoint "api/items"
+        // Fetch existing items from API
         items = await Http.GetFromJsonAsync<List<Item>>("https://localhost:7110/api/items");
     }
 
     private void ShowCreateItemForm()
     {
-        // Показать форму для создания нового Item
-        showCreateForm = true;
+        // Toggle the form visibility
+        showCreateForm = !showCreateForm;
     }
 
     private async Task HandleCreateItem()
     {
         try
         {
-            // Отправка данных нового item через POST запрос на endpoint "api/item/create"
             var response = await Http.PostAsJsonAsync("https://localhost:7110/api/item/create", newItem);
 
             if (response.IsSuccessStatusCode)
             {
-                // Если создание прошло успешно, обновляем список
+                // Refresh the list of items after creation
                 items = await Http.GetFromJsonAsync<List<Item>>("https://localhost:7110/api/items");
-                showCreateForm = false; // Скрыть форму
+                showCreateForm = false; // Hide the form
             }
             else
             {
-                // Выводим ошибку в консоль, если запрос не удался
                 Console.WriteLine("Error creating item.");
             }
         }
         catch (Exception ex)
         {
-            // Логируем исключение
             Console.WriteLine($"Error: {ex.Message}");
         }
     }
@@ -138,25 +146,21 @@
 
             if (response.IsSuccessStatusCode)
             {
-                // Обновляем список после удаления
                 items = await Http.GetFromJsonAsync<List<Item>>("https://localhost:7110/api/items");
             }
             else
             {
-                // Ошибка удаления
                 Console.WriteLine("Error deleting item.");
             }
         }
         catch (Exception ex)
         {
-            // Логируем исключение
             Console.WriteLine($"Error: {ex.Message}");
         }
     }
 
     private void NavigateToItemDetails(Guid itemId)
     {
-        // Переход на страницу с подробностями о предмете
         NavigationManager.NavigateTo($"/item/{itemId}");
     }
 }

@@ -1,22 +1,99 @@
-﻿section {
-    margin: auto;
-    gap: 18px;
+﻿/* Основной стиль для формы */
+.login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f9;
+    font-family: 'Arial', sans-serif;
+    animation: fadeIn 1s ease-in;
 }
 
-.logo {
-    align-self: center;
+.login-container {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: slideUp 0.5s ease-out;
+}
+
+.welcome-text {
     text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    animation: textGlow 2s infinite alternate;
 }
 
-.App {
-    font-size: 20px;
+.form-group {
+    margin-bottom: 1.5rem;
 }
 
-.login {
-    border-radius: 10px;
+/* Плавное появление (fadeIn) */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
+/* Эффект появления с низу (slideUp) */
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
 
-.login > *:focus-visible {
-    outline-color: #2bbee7;
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Эффект свечения текста (textGlow) */
+@keyframes textGlow {
+    0% {
+        color: #666;
+    }
+
+    100% {
+        color: #ff6f61;
+        text-shadow: 0 0 10px rgba(255, 111, 97, 1), 0 0 20px rgba(255, 111, 97, 1);
+    }
+}
+
+/* Стили для полей ввода */
+.login-input {
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    padding: 12px;
+    transition: all 0.3s ease;
+}
+
+    .login-input:focus {
+        border-color: #ff6f61;
+        box-shadow: 0 0 10px rgba(255, 111, 97, 1);
+        outline: none;
+    }
+
+/* Пиксельная анимация */
+@keyframes pixelAnimation {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Анимация на фокус поля ввода */
+.login-input:focus {
+    animation: pixelAnimation 0.3s ease-in-out;
 }
