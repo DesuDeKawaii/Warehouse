@@ -1,4 +1,4 @@
-﻿@page "/storage"
+﻿@page "/storages"
 @using warehouse_management_application.Storages
 @using warehouse_management_core.DTO_s
 @using warehouse_management_core.Entities
@@ -188,6 +188,6 @@
     private void NavigateToStorage(Guid storageId)
     {
         // Переход на страницу с подробностями склада
-        NavigationManager.NavigateTo($"https://localhost:7110/api/storage/{storageId}");
+        NavigationManager.NavigateTo($"/storage/{storageId}");
     }
 }

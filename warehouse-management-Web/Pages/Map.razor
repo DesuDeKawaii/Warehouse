@@ -12,7 +12,7 @@
         frameborder="0" style="border-radius:10px;height:80vh;width:100%;"></iframe>
 
 <!-- Кнопка для добавления местоположений -->
-<button class="btn btn-primary add-location-btn" @onclick="AddStorageLocations">Добавить местоположения</button>
+@* <button class="btn btn-primary add-location-btn" @onclick="AddStorageLocations">Добавить местоположения</button> *@
 
 @code {
     private List<StorageDTO> storages = new List<StorageDTO>();
@@ -23,7 +23,7 @@
         // Получаем данные всех складов с API
         storages = await Http.GetFromJsonAsync<List<StorageDTO>>("api/storages");
 
-        // Добавляем маркеры для каждого склада
+        // Инициализируем карту и добавляем маркеры
         foreach (var storage in storages)
         {
             await JS.InvokeVoidAsync("addMarker", storage.Latitude, storage.Longitude, storage.Name);
@@ -38,3 +38,25 @@
         public double Longitude { get; set; }
     }
 }
+
+<!-- Добавление скрипта и инициализации карты внизу страницы -->
+<script> Scripts {
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=b510bd6e-02ab-49ee-abee-67104862a094&onload=initializeMap" type="text/javascript"></script>
+<script type="text/javascript">
+    // Функция инициализации карты
+    function initializeMap() {
+        ymaps.ready(function () {
+            var map = new ymaps.Map("map", {
+                center: [55.76, 37.64], // Центр карты (пример, можно изменить)
+                zoom: 10
+            });
+
+            // Функция для добавления маркеров
+            window.addMarker = function (lat, lon, name) {
+                var placemark = new ymaps.Placemark([lat, lon], {
+                    balloonContent: name
+                });
+                map.geoObjects.add(placemark);
+            };
+        });
+    }</script>

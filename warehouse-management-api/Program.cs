@@ -58,12 +58,25 @@ builder.Services.AddScoped<ILogger<ShopService>, Logger<ShopService>>();
 builder.Services.AddScoped<ILogger<StorageService>, Logger<StorageService>>();
 builder.Services.AddScoped<ILogger<ItemService>, Logger<ItemService>>();
 
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", builder =>
+    {
+        builder.AllowAnyOrigin()
+               .AllowAnyMethod()
+               .AllowAnyHeader();
+    });
+});
+
+
+
 // ���������� Swagger
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
-
+app.UseCors("AllowAll");
 app.UseCors("AllowBlazor"); // ���������� �������� CORS
 
 // ������������ HTTP-���������

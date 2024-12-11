@@ -1,2 +1,8 @@
-﻿body {
+﻿
+.bg-gradient-primary {
+    background: linear-gradient(45deg, #007bff, #6610f2);
+}
+
+.rounded-4 {
+    border-radius: 1.5rem !important;
 }

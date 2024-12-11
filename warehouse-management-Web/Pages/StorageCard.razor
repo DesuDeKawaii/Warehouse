@@ -1,0 +1,122 @@
+﻿@page "/storage/{storageId:guid}"
+@using warehouse_management_application.Storages
+@using warehouse_management_core.Entities
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+
+<PageTitle>Storage Details</PageTitle>
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card shadow-lg rounded-4 border-0">
+                <div class="card-header bg-gradient-primary text-white text-center py-4 rounded-top">
+                    <h2 class="fw-bold mb-0">@storage?.Name</h2>
+                </div>
+                <div class="card-body p-4">
+                    @if (storage == null)
+                    {
+                        <div class="d-flex justify-content-center align-items-center" style="height: 200px;">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </div>
+                    }
+                    else
+                    {
+                        <!-- Описание склада -->
+                        <p class="fs-5 text-muted">@storage.Description</p>
+                        <div class="row my-4">
+                            <div class="col-md-12 text-center">
+                                <div class="bg-light rounded-3 p-3 shadow-sm">
+                                    <h5 class="fw-bold">Storage Temperature</h5>
+                                    <p class="text-warning fs-4">@storage.Temperature&deg;C</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row my-4">
+                            <div class="col-md-12 text-center">
+                                <div class="bg-light rounded-3 p-3 shadow-sm">
+                                    <h5 class="fw-bold">Storage Capacity</h5>
+                                    <p class="text-warning fs-4">@storage.Capacity м³</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row my-4">
+                            <div class="col-md-12 text-center">
+                                <div class="bg-light rounded-3 p-3 shadow-sm">
+                                    <h5 class="fw-bold">Storage Temperature</h5>
+                                    <p class="text-warning fs-4">@storage.Longitude° Lng</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row my-4">
+                            <div class="col-md-12 text-center">
+                                <div class="bg-light rounded-3 p-3 shadow-sm">
+                                    <h5 class="fw-bold">Storage Temperature</h5>
+                                    <p class="text-warning fs-4">@storage.Latitude° Lat</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Список товаров на складе (если есть) -->
+                        <h5 class="text-center mt-5 fw-bold">Items in this Storage</h5>
+                        @if (itemStorages.Any())
+                        {
+                            <ul class="list-group mt-3">
+                                @foreach (var itemStorage in itemStorages)
+                                {
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <span>@itemStorage.Item</span>
+                                        <span class="badge bg-secondary">@itemStorage.Amount</span>
+                                    </li>
+                                }
+                            </ul>
+                        }
+                        else
+                        {
+                            <p class="text-center text-muted mt-3">No items found in this storage.</p>
+                        }
+
+                        <!-- Кнопка возврата -->
+                        <div class="text-center mt-4">
+                            <button class="btn btn-outline-primary btn-lg rounded-pill px-4 py-2" @onclick="GoBack">
+                                <i class="bi bi-arrow-left-circle me-2"></i>Back to storages List
+                            </button>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@code {
+    [Parameter] public Guid storageId { get; set; }
+    private Storage storage;
+    private List<ItemStorage> itemStorages = new List<ItemStorage>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            // Получаем детали склада
+            storage = await Http.GetFromJsonAsync<Storage>($"https://localhost:7110/api/storage/{storageId}");
+
+            // Получаем товары на складе
+            itemStorages = await Http.GetFromJsonAsync<List<ItemStorage>>($"https://localhost:7110/api/storage/{storageId}/items");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error loading storage: {ex.Message}");
+        }
+    }
+
+    private void GoBack()
+    {
+        NavigationManager.NavigateTo("/storages");
+    }
+}

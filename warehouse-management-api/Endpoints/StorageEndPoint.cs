@@ -92,14 +92,17 @@ public static class StorageEndPoint
     {
         try
         {
-            await service.GetStorageById(storageId, cancellationToken);
-            return Results.Ok(storageId);
+            var storage = await service.GetStorageById(storageId, cancellationToken);
+            if (storage == null)
+            {
+                logger.LogError( "Failed to find storage.");
+                return Results.BadRequest($"Storage with ID '{storageId}' is not found.");
+            }
+            var storageDto = (StorageDTO)storage;
+            return Results.Ok(storageDto);
+
         }
-        catch (ItemNotFoundException ex)
-        {
-            logger.LogError(ex, "Failed to find storage.");
-            return Results.BadRequest($"Storage with ID '{storageId}' is not found.");
-        }
+        
         catch (Exception ex)
         {
             logger.LogError(ex, "An error occurred while retrieving the storage.");

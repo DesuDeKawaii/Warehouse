@@ -1,0 +1,54 @@
+﻿
+.bg-gradient-primary {
+    background: linear-gradient(45deg, #007bff, #6610f2);
+}
+
+.rounded-4 {
+    border-radius: 1.5rem !important;
+}
+
+.list-group-item {
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+    .list-group-item:hover {
+        background-color: #f1f1f1;
+    }
+
+.btn-outline-primary {
+    transition: all 0.3s ease;
+}
+
+    .btn-outline-primary:hover {
+        background-color: #007bff;
+        color: white;
+    }
+
+.card-body {
+    background-color: #f9f9f9;
+}
+
+.fw-bold {
+    font-weight: 600;
+}
+
+.shadow-sm {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Анимации */
+.spinner-border {
+    animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+

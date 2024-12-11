@@ -41,8 +41,12 @@ public static class ItemEndPoint
     {
         try
         {
+            // Получаем список сущностей
             var items = await service.GetItemsAsync(cancellationToken);
-            return Results.Ok(items);
+
+            // Преобразуем каждую сущность в DTO
+            var itemDtos = items.Select(item => (ItemDTO)item).ToList();
+            return Results.Ok(itemDtos);
         }
         catch (Exception ex)
         {
@@ -54,13 +58,17 @@ public static class ItemEndPoint
     {
         try
         {
+            // Получаем сущность Item
             var item = await service.GetItemById(itemId, cancellationToken);
-            return Results.Ok(item);
-        }
-        catch (ItemNotFoundException ex)
-        {
-            logger.LogError(ex, "Failed to find item.");
-            return Results.BadRequest($"An item with ID '{itemId}' is not found.");
+            if (item == null)
+            {
+                logger.LogWarning($"Item with ID {itemId} not found.");
+                return Results.NotFound($"Item with ID {itemId} not found.");
+            }
+
+            // Преобразуем в DTO
+            var itemDto = (ItemDTO)item;
+            return Results.Ok(itemDto);
         }
         catch (Exception ex)
         {
@@ -68,6 +76,7 @@ public static class ItemEndPoint
             return Results.StatusCode(StatusCodes.Status500InternalServerError);
         }
     }
+
 
     public static async Task<IResult> DeleteItem(Guid itemId, ItemService service, ILogger<ItemService> logger, CancellationToken cancellationToken)
     {

@@ -3,44 +3,80 @@
   "WorkspaceRootPath": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{11C17314-2BD6-4438-8100-2E83572E3FCF}|warehouse-management-Web\\warehouse-management-Web.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\warehouse\\warehouse-management\\warehouse-management-web\\pages\\items.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{11C17314-2BD6-4438-8100-2E83572E3FCF}|warehouse-management-Web\\warehouse-management-Web.csproj|solutionrelative:warehouse-management-web\\pages\\items.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{11C17314-2BD6-4438-8100-2E83572E3FCF}|warehouse-management-Web\\warehouse-management-Web.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\warehouse\\warehouse-management\\warehouse-management-web\\pages\\map.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{11C17314-2BD6-4438-8100-2E83572E3FCF}|warehouse-management-Web\\warehouse-management-Web.csproj|solutionrelative:warehouse-management-web\\pages\\map.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{11C17314-2BD6-4438-8100-2E83572E3FCF}|warehouse-management-Web\\warehouse-management-Web.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\warehouse\\warehouse-management\\warehouse-management-web\\pages\\items.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{11C17314-2BD6-4438-8100-2E83572E3FCF}|warehouse-management-Web\\warehouse-management-Web.csproj|solutionrelative:warehouse-management-web\\pages\\items.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{11C17314-2BD6-4438-8100-2E83572E3FCF}|warehouse-management-Web\\warehouse-management-Web.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\warehouse\\warehouse-management\\warehouse-management-web\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{11C17314-2BD6-4438-8100-2E83572E3FCF}|warehouse-management-Web\\warehouse-management-Web.csproj|solutionrelative:warehouse-management-web\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E7D18216-2383-4AED-A3F9-62590EF695EA}|warehouse-management-api\\warehouse-management-api.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\warehouse\\warehouse-management\\warehouse-management-api\\endpoints\\itemendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7D18216-2383-4AED-A3F9-62590EF695EA}|warehouse-management-api\\warehouse-management-api.csproj|solutionrelative:warehouse-management-api\\endpoints\\itemendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{11C17314-2BD6-4438-8100-2E83572E3FCF}|warehouse-management-Web\\warehouse-management-Web.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\warehouse\\warehouse-management\\warehouse-management-web\\wwwroot\\map.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{11C17314-2BD6-4438-8100-2E83572E3FCF}|warehouse-management-Web\\warehouse-management-Web.csproj|solutionrelative:warehouse-management-web\\wwwroot\\map.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{11C17314-2BD6-4438-8100-2E83572E3FCF}|warehouse-management-Web\\warehouse-management-Web.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\warehouse\\warehouse-management\\warehouse-management-web\\pages\\storages.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{11C17314-2BD6-4438-8100-2E83572E3FCF}|warehouse-management-Web\\warehouse-management-Web.csproj|solutionrelative:warehouse-management-web\\pages\\storages.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E7D18216-2383-4AED-A3F9-62590EF695EA}|warehouse-management-api\\warehouse-management-api.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\warehouse\\warehouse-management\\warehouse-management-api\\endpoints\\storageendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7D18216-2383-4AED-A3F9-62590EF695EA}|warehouse-management-api\\warehouse-management-api.csproj|solutionrelative:warehouse-management-api\\endpoints\\storageendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{11C17314-2BD6-4438-8100-2E83572E3FCF}|warehouse-management-Web\\warehouse-management-Web.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\warehouse\\warehouse-management\\warehouse-management-web\\pages\\storagecard.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{11C17314-2BD6-4438-8100-2E83572E3FCF}|warehouse-management-Web\\warehouse-management-Web.csproj|solutionrelative:warehouse-management-web\\pages\\storagecard.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{11C17314-2BD6-4438-8100-2E83572E3FCF}|warehouse-management-Web\\warehouse-management-Web.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\warehouse\\warehouse-management\\warehouse-management-web\\pages\\storage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{11C17314-2BD6-4438-8100-2E83572E3FCF}|warehouse-management-Web\\warehouse-management-Web.csproj|solutionrelative:warehouse-management-web\\pages\\storage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E7D18216-2383-4AED-A3F9-62590EF695EA}|warehouse-management-api\\warehouse-management-api.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\warehouse\\warehouse-management\\warehouse-management-api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7D18216-2383-4AED-A3F9-62590EF695EA}|warehouse-management-api\\warehouse-management-api.csproj|solutionrelative:warehouse-management-api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{11C17314-2BD6-4438-8100-2E83572E3FCF}|warehouse-management-Web\\warehouse-management-Web.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\warehouse\\warehouse-management\\warehouse-management-web\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{11C17314-2BD6-4438-8100-2E83572E3FCF}|warehouse-management-Web\\warehouse-management-Web.csproj|solutionrelative:warehouse-management-web\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{11C17314-2BD6-4438-8100-2E83572E3FCF}|warehouse-management-Web\\warehouse-management-Web.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\warehouse\\warehouse-management\\warehouse-management-web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11C17314-2BD6-4438-8100-2E83572E3FCF}|warehouse-management-Web\\warehouse-management-Web.csproj|solutionrelative:warehouse-management-web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7D18216-2383-4AED-A3F9-62590EF695EA}|warehouse-management-api\\warehouse-management-api.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\warehouse\\warehouse-management\\warehouse-management-api\\warehouse-management-api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{E7D18216-2383-4AED-A3F9-62590EF695EA}|warehouse-management-api\\warehouse-management-api.csproj|solutionrelative:warehouse-management-api\\warehouse-management-api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11C17314-2BD6-4438-8100-2E83572E3FCF}|warehouse-management-Web\\warehouse-management-Web.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\warehouse\\warehouse-management\\warehouse-management-web\\pages\\itemcard.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{11C17314-2BD6-4438-8100-2E83572E3FCF}|warehouse-management-Web\\warehouse-management-Web.csproj|solutionrelative:warehouse-management-web\\pages\\itemcard.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{11C17314-2BD6-4438-8100-2E83572E3FCF}|warehouse-management-Web\\warehouse-management-Web.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\warehouse\\warehouse-management\\warehouse-management-web\\pages\\itemcard.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{11C17314-2BD6-4438-8100-2E83572E3FCF}|warehouse-management-Web\\warehouse-management-Web.csproj|solutionrelative:warehouse-management-web\\pages\\itemcard.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{11C17314-2BD6-4438-8100-2E83572E3FCF}|warehouse-management-Web\\warehouse-management-Web.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\warehouse\\warehouse-management\\warehouse-management-web\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{11C17314-2BD6-4438-8100-2E83572E3FCF}|warehouse-management-Web\\warehouse-management-Web.csproj|solutionrelative:warehouse-management-web\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{11C17314-2BD6-4438-8100-2E83572E3FCF}|warehouse-management-Web\\warehouse-management-Web.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\warehouse\\warehouse-management\\warehouse-management-web\\layout\\applayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{11C17314-2BD6-4438-8100-2E83572E3FCF}|warehouse-management-Web\\warehouse-management-Web.csproj|solutionrelative:warehouse-management-web\\layout\\applayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{11C17314-2BD6-4438-8100-2E83572E3FCF}|warehouse-management-Web\\warehouse-management-Web.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\warehouse\\warehouse-management\\warehouse-management-web\\pages\\storagecard.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{11C17314-2BD6-4438-8100-2E83572E3FCF}|warehouse-management-Web\\warehouse-management-Web.csproj|solutionrelative:warehouse-management-web\\pages\\storagecard.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11C17314-2BD6-4438-8100-2E83572E3FCF}|warehouse-management-Web\\warehouse-management-Web.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\warehouse\\warehouse-management\\warehouse-management-web\\pages\\items.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{11C17314-2BD6-4438-8100-2E83572E3FCF}|warehouse-management-Web\\warehouse-management-Web.csproj|solutionrelative:warehouse-management-web\\pages\\items.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7D18216-2383-4AED-A3F9-62590EF695EA}|warehouse-management-api\\warehouse-management-api.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\warehouse\\warehouse-management\\warehouse-management-api\\endpoints\\storageendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7D18216-2383-4AED-A3F9-62590EF695EA}|warehouse-management-api\\warehouse-management-api.csproj|solutionrelative:warehouse-management-api\\endpoints\\storageendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7D18216-2383-4AED-A3F9-62590EF695EA}|warehouse-management-api\\warehouse-management-api.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\warehouse\\warehouse-management\\warehouse-management-api\\endpoints\\itemendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7D18216-2383-4AED-A3F9-62590EF695EA}|warehouse-management-api\\warehouse-management-api.csproj|solutionrelative:warehouse-management-api\\endpoints\\itemendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40F3CC7D-4F25-445C-9569-F4C69A6B1789}|warehouse-management-core\\warehouse-management-core.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\warehouse\\warehouse-management\\warehouse-management-core\\entities\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40F3CC7D-4F25-445C-9569-F4C69A6B1789}|warehouse-management-core\\warehouse-management-core.csproj|solutionrelative:warehouse-management-core\\entities\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{11C17314-2BD6-4438-8100-2E83572E3FCF}|warehouse-management-Web\\warehouse-management-Web.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\warehouse\\warehouse-management\\warehouse-management-web\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{11C17314-2BD6-4438-8100-2E83572E3FCF}|warehouse-management-Web\\warehouse-management-Web.csproj|solutionrelative:warehouse-management-web\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11C17314-2BD6-4438-8100-2E83572E3FCF}|warehouse-management-Web\\warehouse-management-Web.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\warehouse\\warehouse-management\\warehouse-management-web\\pages\\items.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{11C17314-2BD6-4438-8100-2E83572E3FCF}|warehouse-management-Web\\warehouse-management-Web.csproj|solutionrelative:warehouse-management-web\\pages\\items.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CF399B3F-6A2C-4A77-AB5B-13D85975B8AE}|warehouse-management-infrastructure\\warehouse-management-infrastructure.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\warehouse\\warehouse-management\\warehouse-management-infrastructure\\db\\warehousecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -53,14 +89,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{FE9F4AA6-19F3-4513-886D-8049C1CCDA3D}|warehouse-management-application\\warehouse-management-application.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\warehouse\\warehouse-management\\warehouse-management-application\\items\\itemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FE9F4AA6-19F3-4513-886D-8049C1CCDA3D}|warehouse-management-application\\warehouse-management-application.csproj|solutionrelative:warehouse-management-application\\items\\itemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{40F3CC7D-4F25-445C-9569-F4C69A6B1789}|warehouse-management-core\\warehouse-management-core.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\warehouse\\warehouse-management\\warehouse-management-core\\entities\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{40F3CC7D-4F25-445C-9569-F4C69A6B1789}|warehouse-management-core\\warehouse-management-core.csproj|solutionrelative:warehouse-management-core\\entities\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{11C17314-2BD6-4438-8100-2E83572E3FCF}|warehouse-management-Web\\warehouse-management-Web.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\warehouse\\warehouse-management\\warehouse-management-web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{11C17314-2BD6-4438-8100-2E83572E3FCF}|warehouse-management-Web\\warehouse-management-Web.csproj|solutionrelative:warehouse-management-web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{11C17314-2BD6-4438-8100-2E83572E3FCF}|warehouse-management-Web\\warehouse-management-Web.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\warehouse\\warehouse-management\\warehouse-management-web\\layout\\applayout.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
@@ -86,35 +114,127 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-api\\Program.cs",
+              "RelativeDocumentMoniker": "warehouse-management-api\\Program.cs",
+              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-api\\Program.cs",
+              "RelativeToolTip": "warehouse-management-api\\Program.cs",
+              "ViewState": "AQIAAEEAAAAAAAAAAAAgwE4AAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T23:03:47.996Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "warehouse-management-api.http",
+              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-api\\warehouse-management-api.http",
+              "RelativeDocumentMoniker": "warehouse-management-api\\warehouse-management-api.http",
+              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-api\\warehouse-management-api.http",
+              "RelativeToolTip": "warehouse-management-api\\warehouse-management-api.http",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2024-12-11T22:25:08.137Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-Web\\wwwroot\\index.html",
+              "RelativeDocumentMoniker": "warehouse-management-Web\\wwwroot\\index.html",
+              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-Web\\wwwroot\\index.html",
+              "RelativeToolTip": "warehouse-management-Web\\wwwroot\\index.html",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-12-11T22:24:39.266Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Map.js",
+              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-Web\\wwwroot\\Map.js",
+              "RelativeDocumentMoniker": "warehouse-management-Web\\wwwroot\\Map.js",
+              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-Web\\wwwroot\\Map.js",
+              "RelativeToolTip": "warehouse-management-Web\\wwwroot\\Map.js",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAAwB0AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-12-11T22:23:49.426Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Map.razor",
+              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-Web\\Pages\\Map.razor",
+              "RelativeDocumentMoniker": "warehouse-management-Web\\Pages\\Map.razor",
+              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-Web\\Pages\\Map.razor",
+              "RelativeToolTip": "warehouse-management-Web\\Pages\\Map.razor",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAABMAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-11T22:23:35.123Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ItemCard.razor.css",
+              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-Web\\Pages\\ItemCard.razor.css",
+              "RelativeDocumentMoniker": "warehouse-management-Web\\Pages\\ItemCard.razor.css",
+              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-Web\\Pages\\ItemCard.razor.css",
+              "RelativeToolTip": "warehouse-management-Web\\Pages\\ItemCard.razor.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-11T22:22:43.72Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "StorageCard.razor.css",
+              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-Web\\Pages\\StorageCard.razor.css",
+              "RelativeDocumentMoniker": "warehouse-management-Web\\Pages\\StorageCard.razor.css",
+              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-Web\\Pages\\StorageCard.razor.css",
+              "RelativeToolTip": "warehouse-management-Web\\Pages\\StorageCard.razor.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-11T22:08:04.969Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "ItemEndPoint.cs",
               "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-api\\Endpoints\\ItemEndPoint.cs",
               "RelativeDocumentMoniker": "warehouse-management-api\\Endpoints\\ItemEndPoint.cs",
               "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-api\\Endpoints\\ItemEndPoint.cs",
               "RelativeToolTip": "warehouse-management-api\\Endpoints\\ItemEndPoint.cs",
-              "ViewState": "AQIAAEEAAAAAAAAAAAAcwE0AAAAJAAAA",
+              "ViewState": "AQIAADgAAAAAAAAAAAA4wEUAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T06:36:11.285Z"
+              "WhenOpened": "2024-12-03T06:36:11.285Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "Item.cs",
               "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-core\\Entities\\Item.cs",
               "RelativeDocumentMoniker": "warehouse-management-core\\Entities\\Item.cs",
               "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-core\\Entities\\Item.cs",
               "RelativeToolTip": "warehouse-management-core\\Entities\\Item.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAcAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-03T01:52:55.361Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 20,
               "Title": "StorageService.cs",
               "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-application\\Storages\\StorageService.cs",
               "RelativeDocumentMoniker": "warehouse-management-application\\Storages\\StorageService.cs",
@@ -126,19 +246,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 14,
               "Title": "StorageEndPoint.cs",
               "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-api\\Endpoints\\StorageEndPoint.cs",
               "RelativeDocumentMoniker": "warehouse-management-api\\Endpoints\\StorageEndPoint.cs",
               "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-api\\Endpoints\\StorageEndPoint.cs",
               "RelativeToolTip": "warehouse-management-api\\Endpoints\\StorageEndPoint.cs",
-              "ViewState": "AQIAAEwAAAAAAAAAAAAIwHMAAAAJAAAA",
+              "ViewState": "AQIAAFgAAAAAAAAAAAAcwGgAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T00:43:05.645Z"
+              "WhenOpened": "2024-12-03T00:43:05.645Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 18,
               "Title": "Items.razor.css",
               "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-Web\\Pages\\Items.razor.css",
               "RelativeDocumentMoniker": "warehouse-management-Web\\Pages\\Items.razor.css",
@@ -150,7 +271,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 21,
               "Title": "ItemService.cs",
               "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-application\\Items\\ItemService.cs",
               "RelativeDocumentMoniker": "warehouse-management-application\\Items\\ItemService.cs",
@@ -162,7 +283,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 19,
               "Title": "WarehouseContext.cs",
               "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-infrastructure\\Db\\WarehouseContext.cs",
               "RelativeDocumentMoniker": "warehouse-management-infrastructure\\Db\\WarehouseContext.cs",
@@ -174,56 +295,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-Web\\Program.cs",
               "RelativeDocumentMoniker": "warehouse-management-Web\\Program.cs",
               "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-Web\\Program.cs",
               "RelativeToolTip": "warehouse-management-Web\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAqAAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T22:19:00.047Z"
+              "WhenOpened": "2024-12-01T22:19:00.047Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 13,
               "Title": "Items.razor",
               "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-Web\\Pages\\Items.razor",
               "RelativeDocumentMoniker": "warehouse-management-Web\\Pages\\Items.razor",
               "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-Web\\Pages\\Items.razor",
               "RelativeToolTip": "warehouse-management-Web\\Pages\\Items.razor",
-              "ViewState": "AQIAAEgAAAAAAAAAAAAgwC0AAAAiAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAKUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-24T23:02:17.462Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "ItemCard.razor",
               "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-Web\\Pages\\ItemCard.razor",
               "RelativeDocumentMoniker": "warehouse-management-Web\\Pages\\ItemCard.razor",
               "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-Web\\Pages\\ItemCard.razor",
               "RelativeToolTip": "warehouse-management-Web\\Pages\\ItemCard.razor",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAFAAAA",
+              "ViewState": "AQIAADYAAAAAAAAAAAAAAD0AAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-24T23:00:22.15Z"
+              "WhenOpened": "2024-11-24T23:00:22.15Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Storage.razor",
-              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-Web\\Pages\\Storage.razor",
-              "RelativeDocumentMoniker": "warehouse-management-Web\\Pages\\Storage.razor",
-              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-Web\\Pages\\Storage.razor",
-              "RelativeToolTip": "warehouse-management-Web\\Pages\\Storage.razor",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAAACMAAAAEAAAA",
+              "DocumentIndex": 4,
+              "Title": "StorageCard.razor",
+              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-Web\\Pages\\StorageCard.razor",
+              "RelativeDocumentMoniker": "warehouse-management-Web\\Pages\\StorageCard.razor",
+              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-Web\\Pages\\StorageCard.razor",
+              "RelativeToolTip": "warehouse-management-Web\\Pages\\StorageCard.razor",
+              "ViewState": "AQIAACoAAAAAAAAAAAAgwDwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-24T23:00:16.296Z"
+              "WhenOpened": "2024-11-24T23:00:16.296Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 24,
               "Title": "Storages.razor.css",
               "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-Web\\Pages\\Storages.razor.css",
               "RelativeDocumentMoniker": "warehouse-management-Web\\Pages\\Storages.razor.css",
@@ -235,7 +359,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 22,
               "Title": "AppLayout.razor.css",
               "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-Web\\Layout\\AppLayout.razor.css",
               "RelativeDocumentMoniker": "warehouse-management-Web\\Layout\\AppLayout.razor.css",
@@ -247,7 +371,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 23,
               "Title": "Home.razor.css",
               "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-Web\\Pages\\Home.razor.css",
               "RelativeDocumentMoniker": "warehouse-management-Web\\Pages\\Home.razor.css",
@@ -259,15 +383,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "Home.razor",
               "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-Web\\Pages\\Home.razor",
               "RelativeDocumentMoniker": "warehouse-management-Web\\Pages\\Home.razor",
               "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-Web\\Pages\\Home.razor",
               "RelativeToolTip": "warehouse-management-Web\\Pages\\Home.razor",
-              "ViewState": "AQIAAHsAAAAAAAAAAAAAAJoAAAA3AAAA",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAAA4AAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-24T22:08:13.9Z"
+              "WhenOpened": "2024-11-24T22:08:13.9Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -277,13 +402,14 @@
               "RelativeDocumentMoniker": "warehouse-management-Web\\Pages\\Storages.razor",
               "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-Web\\Pages\\Storages.razor",
               "RelativeToolTip": "warehouse-management-Web\\Pages\\Storages.razor",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAKgAAAAAAAAA",
+              "ViewState": "AQIAAHsAAAAAAAAAAAAAAIMAAABoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-24T22:06:26.116Z"
+              "WhenOpened": "2024-11-24T22:06:26.116Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 25,
               "Title": "Login.razor.css",
               "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-Web\\Pages\\Login.razor.css",
               "RelativeDocumentMoniker": "warehouse-management-Web\\Pages\\Login.razor.css",
@@ -295,7 +421,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 17,
               "Title": "Login.razor",
               "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-Web\\Pages\\Login.razor",
               "RelativeDocumentMoniker": "warehouse-management-Web\\Pages\\Login.razor",
@@ -307,15 +433,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "AppLayout.razor",
               "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-Web\\Layout\\AppLayout.razor",
               "RelativeDocumentMoniker": "warehouse-management-Web\\Layout\\AppLayout.razor",
               "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Warehouse\\Warehouse-management\\warehouse-management-Web\\Layout\\AppLayout.razor",
               "RelativeToolTip": "warehouse-management-Web\\Layout\\AppLayout.razor",
-              "ViewState": "AQIAACAAAAAAAAAAAAAYwDEAAAAGAAAA",
+              "ViewState": "AQIAACQAAAAAAAAAAAAAABoAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-24T18:28:04.255Z"
+              "WhenOpened": "2024-11-24T18:28:04.255Z",
+              "EditorCaption": ""
             }
           ]
         }

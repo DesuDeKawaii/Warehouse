@@ -1,43 +1,84 @@
-﻿@page "/item/{itemId:guid}"
+﻿@page "/item/{ItemId:guid}"
+@using warehouse_management_application.Items
 @inject HttpClient Http
 @inject NavigationManager NavigationManager
 
 <PageTitle>Item Details</PageTitle>
 
-<div class="container mt-4">
-    <h3 class="text-center">Item Details</h3>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card shadow-lg rounded-4 border-0">
+                <div class="card-header bg-gradient-primary text-white text-center py-4 rounded-top">
+                    <h2 class="fw-bold mb-0">@item?.Name</h2>
+                </div>
+                <div class="card-body p-4">
+                    @if (item == null)
+                    {
+                        <div class="d-flex justify-content-center align-items-center" style="height: 200px;">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </div>
+                    }
+                    else
+                    {
+                        <p class="fs-5 text-muted">@item.Description</p>
 
-    @if (item == null)
-    {
-        <p class="text-center">Loading...</p>
-    }
-    else
-    {
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">@item.Name</h5>
-                <p class="card-text">Description: @item.Description</p>
-                <p class="card-text">Price: @item.Price</p>
-                <p class="card-text">Expiration Date: @item.ExpirationDate.ToString("d")</p>
+                        <div class="row my-4">
+                            <div class="col-md-6 text-center">
+                                <div class="bg-light rounded-3 p-3 shadow-sm">
+                                    <h5 class="fw-bold">Expiration Date</h5>
+                                    <p class="text-primary fs-4">@item.ExpirationDate.ToString("MMMM dd, yyyy")</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 text-center">
+                                <div class="bg-light rounded-3 p-3 shadow-sm">
+                                    <h5 class="fw-bold">Price</h5>
+                                    <p class="text-success fs-4">$@item.Price.ToString("0.00")</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row my-4">
+                            <div class="col-md-12 text-center">
+                                <div class="bg-light rounded-3 p-3 shadow-sm">
+                                    <h5 class="fw-bold">Storage Temperature</h5>
+                                    <p class="text-warning fs-4">@item.Temperature&deg;C</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-4">
+                            <button class="btn btn-outline-primary btn-lg rounded-pill px-4 py-2" @onclick="GoBack">
+                                <i class="bi bi-arrow-left-circle me-2"></i>Back to Items List
+                            </button>
+                        </div>
+                    }
+                </div>
             </div>
         </div>
-    }
-
-    <div class="text-center mt-4">
-        <button class="btn btn-primary" @onclick="BackToList">Back to Items List</button>
     </div>
 </div>
 
 @code {
-    [Parameter] public Guid itemId { get; set; }
+    [Parameter] public Guid ItemId { get; set; }
     private Item item;
 
     protected override async Task OnInitializedAsync()
     {
-        item = await Http.GetFromJsonAsync<Item>($"https://localhost:7110/api/item/{itemId}");
+        try
+        {
+            // Fetch item details by ID
+            item = await Http.GetFromJsonAsync<Item>($"https://localhost:7110/api/item/{ItemId}");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error loading item: {ex.Message}");
+        }
     }
 
-    private void BackToList()
+    private void GoBack()
     {
         NavigationManager.NavigateTo("/items");
     }

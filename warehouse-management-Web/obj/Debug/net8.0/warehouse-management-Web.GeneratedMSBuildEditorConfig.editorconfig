@@ -26,10 +26,6 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Дмитрий/Desktop/Warehouse/Warehouse-management/warehouse-management-Web/Pages/Storage.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RvcmFnZS5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/Дмитрий/Desktop/Warehouse/Warehouse-management/warehouse-management-Web/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
@@ -61,6 +57,10 @@ build_metadata.AdditionalFiles.CssScope = b-w46qpr291t
 [C:/Users/Дмитрий/Desktop/Warehouse/Warehouse-management/warehouse-management-Web/Pages/Map.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-a2jymy3tgl
+
+[C:/Users/Дмитрий/Desktop/Warehouse/Warehouse-management/warehouse-management-Web/Pages/StorageCard.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RvcmFnZUNhcmQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-0czu4eqe5d
 
 [C:/Users/Дмитрий/Desktop/Warehouse/Warehouse-management/warehouse-management-Web/Pages/Storages.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RvcmFnZXMucmF6b3I=
